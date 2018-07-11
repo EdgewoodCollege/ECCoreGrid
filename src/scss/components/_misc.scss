@@ -1,0 +1,70 @@
+/******		|| MISCELLANEOUS ||		******/
+
+// | IMAGES |
+    .img-hero {
+        width:100%;
+        margin-bottom:15px;
+    }
+    .img-hero-bg-c {
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        height:150px;
+        margin-bottom:15px;
+    }
+    .img-hero-bg-t {
+        background-size:cover;
+        background-position:top;
+        background-repeat:no-repeat;
+        height:150px;
+        margin-bottom:15px;
+    }
+
+    .img-circle {
+        border-radius:50% !important;
+    }
+
+
+// | SITEMAP HEADER |
+h3.title-page {
+    display:none;
+    background-color:$black;
+    color:$white;
+    padding:5px 10px 5px 20px;
+    margin:0px;
+
+    a {
+        color:$white;
+        text-decoration:none;
+    }
+}
+
+
+// | OVERRIDING DNN CONTAINER PADDIDNG |
+[class*="DNNContainer"] {
+    padding:0px;
+  }
+
+
+// | GENERAL |
+.hidden {
+    display:none;
+}
+
+
+// | BREAKPOINTS |
+@media only screen and (min-width: $md) {
+    
+    // - OVERRIDING DNN CONTAINER PADDIDNG
+	h3.title-page {
+		display:block;
+    }
+
+    // - HEROIMAGE
+    .img-hero-bg-t {
+        height:450px;
+    }
+    .img-hero-bg-c {
+        height:450px;
+    }
+}

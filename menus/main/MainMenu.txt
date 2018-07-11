@@ -1,0 +1,36 @@
+<ul>
+  [*>NODE-TOP]
+</ul>
+  [>NODE-TOP]
+    <li[?SELECTED] class="active"[/?]>
+      
+      [?ENABLED]
+        <a href="[=URL]" class="[?NODE] split[/?]">[=TEXT]</a>
+      [?ELSE]    
+        <a href="#" class="[?NODE] single[/?]">[=TEXT]</a>
+      [/?]
+      
+      [?NODE]
+        <ul>
+          [*>NODE]
+        </ul>
+      [/?]
+    </li>
+  [/>]
+  
+  [>NODE]
+    <li class="[?SELECTED] active[/?]">
+      
+      [?ENABLED]  
+        <a href="[=URL]" [?NODE]class="split"[/?]>[=TEXT]</a>
+      [?ELSE]
+        <a href="#">[=TEXT]</a>
+      [/?]
+      
+      [?NODE]
+        <ul>
+          [*>NODE]
+        </ul>
+      [/?]
+    </li>
+  [/>]

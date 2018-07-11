@@ -1,0 +1,64 @@
+/******		|| BUTTON ||		******/
+
+// -| Default Button |- //
+.btn {
+    display: inline-block;
+    padding: 0.47em 1.2em;
+    border: 0;
+    font-family: $open-sans;
+    font-weight: 600;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+}
+
+// -| Callout |- //
+.btn-callout {
+    position: relative;
+    display: block;
+    padding: 25px 1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color:$white;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: center;
+    opacity:.95;
+    transition: all 0.2s ease-out; 
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        border: 1px solid $white;
+        background: transparent;
+    }
+    &:hover {
+        opacity:1;
+        transition: all 0.2s ease-out; 
+    }
+    a {
+        color:$white;
+    }
+}
+
+// -| Button Variables |- //
+.btn-sm {
+    font-size:.85em !important;
+}
+.btn-red {
+    background-color:$red;
+}
+.btn-green {
+    background-color:$green;
+}
+.btn-blue {
+    background-color:$blue;
+}
+.btn-orange {
+    background-color:$orange;
+}

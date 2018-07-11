@@ -1,0 +1,40 @@
+/******		|| CONTEMPLATIVE CAMPUS EVENTS ||		******/
+
+.ccEventTable {
+    background-color:$gray-300;
+    display:grid;
+    grid-template-columns:1fr;
+
+    .ccEventHeader {
+        background-color: $primary-color;
+        padding: 8px 8px 8px 25px;
+        text-align:left;
+        color:$white;
+        grid-column:1/2;
+
+        h2 {
+            color:$white;
+            margin:0px;
+        }
+    }
+    .ccEventItems {
+        font-size:1em;
+
+        .eventItemAlternate {
+            padding:15px 5% 10px 5%;
+            grid-column:1/2;  
+
+            &:nth-child(even) {
+                background-color:$gray-400;
+            }
+            .ccEventDescription {
+                font-size:.7em;
+                font-style:italic;
+                margin:2px 0px;
+            }
+            .ccEventInfo {
+                text-align:right;
+            }
+        }
+    }
+}

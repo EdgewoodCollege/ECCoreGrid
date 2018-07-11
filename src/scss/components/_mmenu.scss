@@ -1,0 +1,44 @@
+/******		|| MMENU ||		******/
+
+#mobileMenu {
+
+    .mm-navbars_top {
+        background-color:$primary-color;
+
+        .mm-navbar {
+            background-color:$primary-color;
+
+            #mmenuHeader {
+
+                img {
+                    height:50px;
+                }
+            }
+
+            .mm-navbar__title {
+                color:$white;
+            }
+        }
+    }
+    .mm-panels {
+        font-size:1.25em;
+
+        .mm-navbar {
+            background-color:$gray-700;
+
+            .mm-navbar__title {
+                color:$white;
+            }
+        }
+    }
+    .mm-navbars_bottom {
+        background-color:$black;
+
+        .mm-navbar {
+
+            a {
+                color:$white;
+            }
+        }
+    }
+}

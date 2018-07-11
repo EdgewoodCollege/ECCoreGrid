@@ -1,0 +1,45 @@
+/******		|| CARD ||		******/
+
+// -| DARK CARD |- //
+
+.dark-card {
+    border:2px solid $white;
+    background-color:$black;
+    text-align:center;
+    font-size:.8em;
+    max-width:300px;
+
+    .caption {
+        letter-spacing:1px;
+        color:$white;
+        
+        h3 {
+            border-bottom:1px solid $white;
+            margin:5px 40px 4px 40px;
+            padding-bottom:0px;
+            font-weight:400; 
+        }
+        .content {
+            height:48px;
+            overflow:hidden;
+            font-size:.5em;
+        }
+    }
+    p { 
+        font-weight:400;
+        margin:0px 40px 30px 40px;
+
+        &:last-child {
+            margin: 0px;
+            padding:10px 0px;
+            background-color:$primary-color;
+
+            a {
+                width:100%;
+                font-size:.8em;
+                font-weight:400;
+                color:$white;
+            }
+        }
+    }
+}

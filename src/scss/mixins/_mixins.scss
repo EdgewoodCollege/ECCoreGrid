@@ -1,0 +1,5 @@
+@mixin box-decoration-break($break) {
+  -webkit-box-decoration-break:$break;
+  -o-box-decoration-break:$break;
+  box-decoration-break:$break;
+}

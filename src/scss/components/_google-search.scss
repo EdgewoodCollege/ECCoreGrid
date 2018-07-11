@@ -1,0 +1,94 @@
+/******		|| GOOGLE SEARCH ||		******/
+
+
+@mixin gscCSS {
+    #___gcse_0 {
+        float: right !important;
+
+        form.gsc-search-box {
+            margin:0px !important;
+    
+            table.gsc-search-box {
+                margin:0 !important;
+                padding: 0 !important;
+                width:250px !important;
+
+                /*----  Search Box  ----*/
+                td.gsc-input {
+                    padding: 0 !important;
+                    margin: 0 !important;
+
+                    .gsc-input-box {
+                        height:25px;
+                        line-height:0;
+                        margin:0;
+                        padding:0;
+                        border:none !important;
+                        background: none !important;
+                        box-sizing:unset;
+
+                        .gsib_a {
+                            width:160px !important;
+                            padding:0 !important;
+
+                            input.gsc-input{
+                                color:$gray-500 !important;
+                                padding:0 5px 0 5px !important;
+                                height:25px !important;
+                                background-image:none !important;
+                                border: none !important;
+                                font-size: 13px !important;
+                                display: inline-block !important;
+                                border-top-left-radius: 5px !important;
+                                border-bottom-left-radius: 5px !important;
+                                box-shadow: none !important;
+                            }
+                        }
+                        /*----  Reset Button  ----*/
+                        .gsib_b {
+                            display:none !important;
+                        }
+                    }
+                }
+                /*----  Search Button  ----*/
+                .gsc-search-button {
+                    margin:0px !important;
+                    border:none !important;
+                    border-radius:0px;
+                    border-top-right-radius: 5px !important;
+                    border-bottom-right-radius: 5px !important;
+                }
+                input.gsc-search-button {
+                    cursor: pointer !important;
+                    background-image: none !important;
+                    padding:0 !important;
+                    background-color:$gray-300 !important;
+                }
+                input.gsc-search-button-v2 {
+                    padding: 5px !important;
+                }
+            }
+        }
+    }
+
+    /*----  IE9 Textbox Blank when Typing Error Fix  ----*/
+    #gsc-i-id1, #gsc-i-id2 {
+        padding-top: 10px !important;
+        padding-bottom:10px !important;
+    }
+}
+  ///  Google Search Default = .searchBox     ///
+ ///  Google Search Navbar = .nbSearch       ///
+///  Google Search Results = .searchResults ///
+
+.searchBox, .nbSearch, .searchResults {
+    display:none;
+    @include gscCSS();
+}
+
+
+@media only screen and (min-width: $md) {
+    .searchBox, .nbSearch, .searchResults {
+        display:block;
+    }
+}

@@ -1,0 +1,116 @@
+/******		|| WATCHERSNET ||		******/
+
+@mixin SiteMap-child-tabs() {
+	border-top: 1px solid $gray-500;
+    padding:8px 0 8px 0;
+}
+
+.SiteMap-EdgewoodGrid {
+	display:none;
+
+	ul.treeview {
+		font-size:.8em;
+		list-style: none;
+		width:100%;
+		margin:0px;
+		padding:0px;
+		background-color:$gray-300;
+		border:1px solid $gray-500;
+		border-top:none;
+		font-weight:400;
+
+		a {
+			text-decoration:none;
+			color: $black;
+			padding-left:10px;
+			display:inline;
+			@include box-decoration-break(clone);
+
+			&:hover {
+				color: $primary-color;
+			}
+			&:active {
+				color:$primary-color;
+				text-decoration:none;
+			}
+		}
+		a.selected {
+			color: $primary-color;
+			font-weight: bold;
+		}
+
+		li.firstItemLi {
+			border-top:none;
+		}
+		li {
+			@include SiteMap-child-tabs();
+			list-style:none;
+			background-color:$gray-300;
+
+			ul {
+				border:none;
+				margin:8px 0px -8px 0px;
+				padding-left:0px;
+				font-size:.925em;
+
+				li {
+					@include SiteMap-child-tabs();
+
+					a {
+						margin-left:12px;
+					}
+					li {
+						@include SiteMap-child-tabs();
+	
+						a {
+							margin-left:23px;
+						}
+						li {
+							@include SiteMap-child-tabs();
+
+							a {
+								margin-left:36px;
+							}
+						}
+					}
+				}
+			}
+
+			&:hover {
+				background-color:$white;
+			}
+			&:last-child {
+				@include SiteMap-child-tabs();
+			}
+		}
+		.hitarea {
+			height:16px;
+			width:16px;
+			margin: 0px 0px 0px -16px;
+			float: right;
+			cursor: pointer;
+		}
+		.expandable-hitarea {
+
+			&:before {
+				content: "\f0da";
+				font-family:'Font Awesome 5 Free';
+				font-weight:700;
+			}
+		}
+		.collapsable-hitarea {
+
+			&:before {
+				content: "\f0d7";
+				font-family:'Font Awesome 5 Free';
+				font-weight:700;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $md) {
+	.SiteMap-EdgewoodGrid {
+		display:block;
+	}
+}

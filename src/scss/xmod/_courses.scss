@@ -1,0 +1,138 @@
+/******		|| COURSES ||		******/
+
+
+///////////////////////
+// Main Faculty --- //
+///////////////////////
+
+.sortButtons {
+    display:grid;
+    grid-template-columns:auto;
+    grid-template-rows:auto;
+    font-size:.8em;
+
+    & > div {
+        grid-column:1/2;
+    }
+    .Alpha {
+        background-color: $primary-color;
+        border: none;
+        color:$white;
+        width:175px;
+        height: 35px;
+    }
+    .Course {
+        background-color: $primary-color;
+        border: none;
+        color:$white;
+        width:175px;
+        height: 35px;
+    }
+    .disabled {
+        opacity: 0.7;
+        border: none;
+    
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+.ecCourseGrid {
+    display:grid;
+    grid-template-columns:1fr;
+
+    .ecCourse {
+        margin:15px 0 0 0;
+    
+        .providerPropertyElement {
+            display: none; 	
+        }
+        .courseTitle {
+            display:inline-block;
+            cursor:auto;
+            font-size:.9em;
+            font-weight:400;
+    
+            .courseCredits {
+                font-size:.675em;
+                font-style:italic;
+            }
+        }
+        .courseText {
+            font-size:.675em;
+            line-height:1.5em;
+            padding-left:15px;
+        }
+    }
+}
+
+/*
+XMOD CUSTOM SETTINGS
+    Setting Name: departmentCode
+    Setting Value: ----
+        // Where '----' = the four letter code pertaining to the department, normally the first four letters of the department
+*/
+
+
+
+
+
+///////////////////////
+// Single Course --- //
+///////////////////////
+
+.ecCourseRow {
+    margin:15px 0 0 0;
+}	
+.ecCourseCode {
+    color:#999999;
+    
+}
+.ecCourseTitle {
+    font-size:18px;
+display:inline-block;
+cursor:auto;
+}
+.ecCourseCredits {
+    font-size:10px;
+    font-style:italic;
+}
+.ecCourseText {
+    color:#333333;
+    font-size:10px;
+}
+.Course {
+background: url(http://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-RightSide.png) no-repeat center;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+color:white;
+width:125px;
+text-align:left;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+}
+.Alpha {
+background: url(http://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-LeftSide.png) no-repeat center;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+color:white;
+width:125px;
+text-align:right;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+}
+.disabled {
+opacity: 0.4;
+border-style: inset;
+}
+.disabled:hover {
+cursor: not-allowed;
+}
+.providerPropertyElement {
+  display: none; 	
+}
+
+/*
+XMOD CUSTOM SETTINGS
+    Setting Name: CRS_ID
+    Setting Value: NATS-101-1EV
+        // Where 'NATS-101-1EV' = the course code, syntax usally follows the pattern of 'DEPT-COURSE#-TAGS'
+*/

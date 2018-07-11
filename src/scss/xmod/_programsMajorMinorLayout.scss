@@ -1,0 +1,43 @@
+/******		|| PROGRAMS LAYOUT ||		******/
+
+.ecPrograms {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:0px 10px;
+
+    .majorMinor {
+        grid-column:1/2;
+
+        & > div {
+            display:none;
+            padding-bottom:30px;
+
+            h2 {
+                margin:0px;
+            }
+        }
+    }
+    .teachingCertificate {
+        grid-column:2/3;
+
+        & > div {
+            display:none;
+            padding-bottom:30px;
+
+            h2 {
+                margin:0px;
+            }
+        }
+    }
+}
+
+/*
+XMOD CUSTOM SETTINGS
+    Setting Name: DegreeTypeModParam
+    Setting Value: Undergraduate
+        // Where 'Undergraduate' = the academic level desired (e.g. Undergraduate, Graduate)
+    &
+    Setting Name: DeptIDModParam
+    Setting Value: 130
+        // Where '130' = the three digit code specific to the department
+*/
