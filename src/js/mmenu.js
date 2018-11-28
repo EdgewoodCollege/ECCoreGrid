@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
                                 height: 2,
                                 position: 'top',
                                 content: [
-                                    "<div id='mmenuHeader'><img src='https://web22.edgewood.edu/Portals/_default/skins/ecCoreGrid/assets/src/img/logos/EC_Web_LogoH.png' alt='Edgewood College' ></div>"
+                                    "<div id='mmenuHeader'><img src='https://web.edgewood.edu/Portals/_default/skins/ecCoreGrid/assets/src/img/logos/EC_Web_LogoH.png' alt='Edgewood College' ></div>"
                                 ]
                             },
                             {

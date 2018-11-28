@@ -19,6 +19,6 @@
 	</div>
 	<nav class="siteNav" role="navigation" aria-label="Desktop Navigation">
           <dnn:MENU id="menuDesktop" MenuStyle="menus/main" NodeSelector="*" ExcludeNodes="11606,11607,11609,10625" runat="server"></dnn:MENU>
-		  <!-- EXLUDENODES __ '11606,11607,11609,10625 for Student Involvement Site' | '' -->
+		  <!-- EXLUDENODES NOTES __ '11606,11607,11609,10625 for Student Involvement Site' | '' -->
 	</nav>
 </header>

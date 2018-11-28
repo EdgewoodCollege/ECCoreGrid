@@ -2,33 +2,37 @@
 
 #siteFooter {
   display:grid;
-  grid-template-rows:2fr 1fr;
-  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-rows:auto auto auto;
+  grid-template-columns:1fr 1fr 1fr;
   grid-template-areas:
-    "logo sitemap actions socialMedia"
-    "legal legal legal legal";
+        "sitemap actions socialMedia"
+        "logo logo logo"
+        "legal legal legal";
   justify-items: center;
   background-color:$primary-color;
   color:$white;
   border-top:4px solid $black;
   padding:25px 15px;
-  font-size:.75em;
+  font-size:1em;
+  //IE Overrides
+  display:-ms-grid;
+  -ms-grid-rows:auto auto auto;
+  -ms-grid-columns:1fr 1fr 1fr;
 
-  .logo {
-    grid-area:logo;
-
-    img {
-      margin:5px 0px;
-    }
-  }
   .sitemap {
     grid-area:sitemap;
+    -ms-grid-row:1;
+    -ms-grid-column:1;
   }
   .actions {
     grid-area:actions;
+    -ms-grid-row:1;
+    -ms-grid-column:2;
   }
   .socialMedia {
     grid-area:socialMedia;
+    -ms-grid-row:1;
+    -ms-grid-column:3;
 
     a {
 
@@ -37,8 +41,20 @@
       }
     }
   }
+  .logo {
+    grid-area:logo;
+    -ms-grid-row:2;
+    -ms-grid-column-span:3;
+    padding:0px 85px;
+
+    img {
+      margin:5px 0px;
+    }
+  }
   .legal {
     grid-area:legal;
+    -ms-grid-row:3;
+    -ms-grid-column-span:3;
     text-align:center;
     
     li {
@@ -66,18 +82,39 @@
 }
 
   /**	BREAKPOINTS	**/
-  @media only screen and (max-width: $sm) {
+  @media only screen and (min-width: $md) {
+
     #siteFooter {
-      grid-template-rows:auto auto auto;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-rows:2fr 1fr;
+      grid-template-columns:1fr 1fr 1fr 1fr;
       grid-template-areas:
-        "sitemap actions socialMedia"
-        "logo logo logo"
-        "legal legal legal";
-      font-size:1em;
+      "logo sitemap actions socialMedia"
+      "legal legal legal legal";
+      //IE Overrides
+      -ms-grid-rows:2fr 1fr;
+      -ms-grid-columns:1fr 1fr 1fr 1fr;
+      font-size:.75em;
 
       .logo {
-        padding:0px 85px;
+        padding:0px;
+        -ms-grid-row:1;
+        -ms-grid-span:1;
+      }
+      .sitemap {
+        -ms-grid-row:1;
+        -ms-grid-column:2;
+      }
+      .actions {
+        -ms-grid-row:1;
+        -ms-grid-column:3;
+      }
+      .socialMedia {
+        -ms-grid-row:1;
+        -ms-grid-column:4;
+      }
+      .legal {
+        -ms-grid-row:2;
+        -ms-grid-column-span:4;     
       }
     }
   }

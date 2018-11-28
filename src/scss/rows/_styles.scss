@@ -1,0 +1,50 @@
+//Variables
+.new { color:5px;}
+
+$red: #8f1324;
+$lightRed: #d1929c;
+$midRed:#b52d43;
+$darkRed: #912436;
+$red80: rgba(143,19,36,0.8);
+$red40: rgba(143,19,36,0.4);
+$black20: rgba(0,0,0,.2);  
+$black80: rgba(0,0,0,.2);
+
+ 
+$primary-bgColors: ( Red: #8f1324, Black: #000, Grey: #999, White:#fff);
+$primary-txtColors: ( #fff, #fff, #000, #000);
+
+
+//Media query breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+ 
+@import 'general-grid';   
+@import 'utility';   
+@import 'reveal4up';
+@import 'reveal4up2';
+@import 'row2colPdf';
+@import 'row1ColText';
+@import 'row2ColMedia';
+@import 'row1ColOverlay';
+@import 'secondaryNav';
+@import 'introLarge';
+@import 'infographic';  
+@import 'ctaRow'; 
+@import 'checkerboard';
+@import 'video'; 
+@import 'factsRow';
+@import 'titleRow';  
+@import 'intuitionCalculator';
+@import 'utilityBtn'; 
+@import 'lity'; 
+
+@import 'freshman';
+	
+// I'm saving the media queries as mixin's in their component SCSS then loading them at the end.
+@import 'media-queries'; 

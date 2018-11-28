@@ -1,18 +1,19 @@
 var gulp          = require('gulp'),
-    autoprefixer  = require('gulp-autoprefixer'),
+    autoprefixer  = require('autoprefixer'),
     jshint        = require('gulp-jshint'),
     sass          = require('gulp-sass'),
     imagemin      = require('gulp-imagemin'),
     rename        = require('gulp-rename'),
     uglify        = require('gulp-uglify'),
     notify        = require('gulp-notify'),
-    sequence      = require('gulp-sequence'),
+    sequence      = require('gulp-sequence').use(gulp),
     replace       = require('gulp-replace'),
     zip           = require('gulp-zip'),
     clean         = require('gulp-clean'),
     sourcemaps    = require('gulp-sourcemaps'),
     path          = require('path'),
     details       = require('./project-details.json'),
+    postcss       = require('gulp-postcss'),
     project       = details.project,
     version       = details.version,
     author        = details.author,
@@ -46,7 +47,6 @@ gulp.task('images', function() {
 });
 
 
-
 /*
 *	CSS TASKS
 ------------------------------------------------------*/
@@ -61,13 +61,21 @@ gulp.task('scss', function() {
   .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(postcss([ autoprefixer({ grid: true }) ]))
     .pipe(rename({suffix: '.min'}))
-    .pipe(autoprefixer({browsers: ['last 2 versions', 'ie >= 9', '> 1%']}))
+    //.pipe(autoprefixer({browsers: ['last 2 versions', 'ie >= 9', '> 1%']}))
 		.pipe(gulp.dest( './'+dist+'/css/'))
 		.pipe(notify({message: 'Styles compiled successfully!', title : 'sass', sound: false}));
 });
 
 
+// return gulp.src('./src/scss/**/*.scss')
+//     .pipe( sourcemaps.init() )
+//     .pipe(sass().on('error', sass.logError))
+//     //setting grid value to true to help with MS Grid issues
+//     .pipe(postcss([ autoprefixer({ grid: true }) ]))
+//     .pipe( sourcemaps.write('.') )
+//     .pipe(gulp.dest('./dist/css/')
 
 
 /*
@@ -77,9 +85,6 @@ gulp.task('scss', function() {
 // Development JS creation.
 // Checks for errors and concats. Minifies.
 gulp.task('js', function() {
-
-   
-
 
   return gulp.src( [ './'+src+'js/*.js'] )
     .pipe(jshint())
@@ -131,7 +136,7 @@ gulp.task('copyfiles', function() {
 
   // This copies the normalize css file over to the scss components folder.
 	// This will overwrite any changes you've made to normalize.css.
-	gulp.src( './'+node+'/normalize.css/normalize.css').pipe(rename('_normalize.scss')).pipe(gulp.dest( './'+src+'scss/components/'));
+	//gulp.src( './'+node+'/normalize.css/normalize.css').pipe(rename('_normalize.scss')).pipe(gulp.dest( './'+src+'scss/components/'));
 
 
   //Copy over the accordion 
@@ -225,6 +230,10 @@ gulp.task('watch', function () {
 // gulp build
 //gulp.task('build', ['scss', 'bscss', 'js', 'images', 'containers', 'manifest']);
 gulp.task('build', ['copyfiles', 'scss', 'js', 'images', 'containers', 'manifest']);
+
+//gulp.task('test', gulpSequence('copyFiles', ['scss', 'js', 'images', 'containers', 'manifest']));
+
+
 
 // gulp package
 gulp.task('package', sequence('build', 'buildzips', 'zipfiles', 'cleanup'));

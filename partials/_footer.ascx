@@ -30,18 +30,19 @@
 			<li><a href="https://www.edgewood.edu/admissions/contact-us"><i class="fas fa-envelope"></i> Contact Us</a></li>
 			<li><a href="https://www.edgewood.edu/about/directions"><i class="fas fa-map-marker-alt"></i> Directions</a></li>
 		</ul>
-		<a href="http://www.facebook.com/edgewoodcollege" target="_blank" rel="noopener noreferrer">
+		<a href="http://www.facebook.com/edgewoodcollege" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
 			<i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-		<a href="https://twitter.com/edgewoodcollege" target="_blank" rel="noopener noreferrer">
+		<a href="https://twitter.com/edgewoodcollege" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
 			<i class="fab fa-twitter-square" aria-hidden="true"></i></a>
-		<a href="http://www.linkedin.com/edu/school?id=19671" target="_blank" rel="noopener noreferrer">
+		<a href="http://www.linkedin.com/edu/school?id=19671" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
 			<i class="fab fa-linkedin" aria-hidden="true"></i></a>
-		<a href="https://www.instagram.com/edgewoodcollege/" target="_blank" rel="noopener noreferrer">
+		<a href="https://www.instagram.com/edgewoodcollege/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
 			<i class="fab fa-instagram" aria-hidden="true"></i></a>
 	</div>
 	<div class="legal">
 		<ul>
 			<li><a href="https://www.edgewood.edu/directory">Directory</a></li>
+			<li><a href="https://www.edgewood.edu/employment">Job Opportunities</a></li>
 			<li><a href="https://www.edgewood.edu/privacy">&nbsp;Privacy Statement</a></li>
 			<li><a href="https://www.edgewood.edu/about/federal-compliance">Federal Compliance</a></li>
 			<li class="copyright"><dnn:COPYRIGHT id="dnnCopyright" runat="server" /></li>

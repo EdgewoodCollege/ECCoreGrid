@@ -26,7 +26,31 @@ $black: #000000 !default;
 
 $black-rgba: rgba(255,255,255,0) !default;
 
+$grey:#ccc;
+
     //Components 
 $link-color: $primary-color !default;
 $font-color: $black !default;
 
+
+
+    //SiteFinity
+        // Will eventually merge this into the current color variables
+
+$white: #fff;
+$white_hover: #ebebeb;
+
+$black_70: rgba($black, 0.7);
+$black_80: rgba($black, 0.8);
+$black_accent: #282828;
+
+$border_grey: #707070;
+$title_grey: #636364;
+$select_grey: #797979;
+$dark_red: #8f1324;
+$mahogany: #57020d;
+$blue_stone: #006a64;
+$elm: #1f758a;
+$desert: #a86326;
+$silver: #c1c1c1;
+$highlight_background: #156df9;

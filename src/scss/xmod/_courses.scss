@@ -15,34 +15,44 @@
         grid-column:1/2;
     }
     .Alpha {
+        background: url(https://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-LeftSide.png) no-repeat center;
+        text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $green;
+        text-align:right;
         background-color: $primary-color;
         border: none;
         color:$white;
         width:175px;
         height: 35px;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
     }
     .Course {
+        background: url(https://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-RightSide.png) no-repeat center;
+        text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+        text-align:left;
         background-color: $primary-color;
         border: none;
         color:$white;
         width:175px;
         height: 35px;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
     }
     .disabled {
         opacity: 0.7;
-        border: none;
     
         &:hover {
             cursor: not-allowed;
         }
     }
 }
-.ecCourseGrid {
+.ecCourseFull {
     display:grid;
     grid-template-columns:1fr;
 
     .ecCourse {
         margin:15px 0 0 0;
+        grid-column:1/2;
     
         .providerPropertyElement {
             display: none; 	
@@ -75,60 +85,9 @@ XMOD CUSTOM SETTINGS
 
 
 
-
-
 ///////////////////////
 // Single Course --- //
 ///////////////////////
-
-.ecCourseRow {
-    margin:15px 0 0 0;
-}	
-.ecCourseCode {
-    color:#999999;
-    
-}
-.ecCourseTitle {
-    font-size:18px;
-display:inline-block;
-cursor:auto;
-}
-.ecCourseCredits {
-    font-size:10px;
-    font-style:italic;
-}
-.ecCourseText {
-    color:#333333;
-    font-size:10px;
-}
-.Course {
-background: url(http://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-RightSide.png) no-repeat center;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-color:white;
-width:125px;
-text-align:left;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-}
-.Alpha {
-background: url(http://web.edgewood.edu/Portals/0/_resources/images/PNG/Button-LeftSide.png) no-repeat center;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-color:white;
-width:125px;
-text-align:right;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-}
-.disabled {
-opacity: 0.4;
-border-style: inset;
-}
-.disabled:hover {
-cursor: not-allowed;
-}
-.providerPropertyElement {
-  display: none; 	
-}
 
 /*
 XMOD CUSTOM SETTINGS

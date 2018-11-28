@@ -23,8 +23,6 @@
         padding: 15px;
        
         .hamburgerMenu {
-            display: block;
-            grid-column: 2/3;
             color: $white;
             align-self:center;
             padding-left:10px;
@@ -46,21 +44,22 @@
 
         .siteName {
             grid-column: 2/4;
+            -ms-grid-column:2;
+            -ms-grid-column-span:2;
 
             h1 {
                 font-size: .875em;
             }
         }
-        .nbSearch {
-            grid-column: 3/4;
+        .searchBox {
+            display:none;
+            grid-column:3/4;
+            -ms-grid-column:3;
         }
     }
     .siteNav {
         display: none;
 
-        .hamburgerMenu {
-            display: none;
-        }
         a {
             font-size:.8em;
             color: #000;
@@ -82,28 +81,22 @@
 @media only screen and (min-width: $md) {
     #siteHeader {
 
-        .logo {
-
-            & > a {
-                grid-column: 2/4;
-                padding-right: 75%;
-            }
-            .hamburgerMenu {
-                display: none;
-                grid-column: 1/2;
-            }
-        }
         .middleRegister {
             padding:2px 0px;
 
             .siteName {
                 grid-column:2/3;
+                -ms-grid-column:2;
+            }
+            .searchBox {
+                display:block;
             }
         }
         .siteNav {
+            display:grid;
+            display:-ms-grid;
             background-color: $gray-400;
             font-size: .8em;
-            display: grid;
         }
     }
 }

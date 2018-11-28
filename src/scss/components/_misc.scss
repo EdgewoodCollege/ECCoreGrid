@@ -5,6 +5,13 @@
         width:100%;
         margin-bottom:15px;
     }
+    .img-hero-bg-t {
+        background-size:cover;
+        background-position:top;
+        background-repeat:no-repeat;
+        height:150px;
+        margin-bottom:15px;
+    }
     .img-hero-bg-c {
         background-size:cover;
         background-position:center;
@@ -12,9 +19,9 @@
         height:150px;
         margin-bottom:15px;
     }
-    .img-hero-bg-t {
+    .img-hero-bg-b {
         background-size:cover;
-        background-position:top;
+        background-position:bottom;
         background-repeat:no-repeat;
         height:150px;
         margin-bottom:15px;
@@ -43,7 +50,19 @@ h3.title-page {
 // | OVERRIDING DNN CONTAINER PADDIDNG |
 [class*="DNNContainer"] {
     padding:0px;
-  }
+}
+
+// | CUSTOM LITY |
+.lity-container {
+    background-color:$white;
+    min-width:50%;
+    min-height:30%;
+    padding:25px 20px;
+
+    .lity-content {
+        transform:none !important;
+    }
+}
 
 
 // | GENERAL |
@@ -66,5 +85,15 @@ h3.title-page {
     }
     .img-hero-bg-c {
         height:450px;
+    }
+    .img-hero-bg-b {
+        height:450px;
+    }
+
+    // - CUSTOM LITY
+    .lity-container {
+        min-width: 55%;
+        min-height: 40%;
+        padding:40px 55px;
     }
 }

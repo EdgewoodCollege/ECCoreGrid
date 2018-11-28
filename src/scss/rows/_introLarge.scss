@@ -1,0 +1,29 @@
+/* _introLarge.scss */
+
+.introLarge {
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    min-height: 501px;
+    .content {
+        background: rgba(181, 45, 67, 0.8);
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        padding: 25px 30px 25px 0;
+        h1 {
+			@include sectionH1 (#fff);
+        }
+        .subtitle {
+            line-height: 30px;
+
+        }
+
+    }
+    .fa {
+        font-size: 30px;
+        color: $lightRed;
+        left: 50%;
+    }
+}

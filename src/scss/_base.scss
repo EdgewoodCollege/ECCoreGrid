@@ -120,6 +120,7 @@ a {
   color: $link-color;
   text-decoration:none;
   transition:.25s ease-in-out all;
+  //font-weight:bold;
 
   &:hover {
     color: darken($font-color, 5%);

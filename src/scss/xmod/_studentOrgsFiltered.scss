@@ -44,6 +44,18 @@
                     margin-left:40px;
                 }
             }
+            .SOrgSocial {
+
+                div {
+                    display:inline;
+                    margin-right:5px;
+                    font-size:20px;
+
+                    i {
+                        color:$primary-color;
+                    }
+                }
+            }
             .SOrgClose {
 
                 button {

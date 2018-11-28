@@ -11,6 +11,7 @@
 	ul.treeview {
 		font-size:.8em;
 		list-style: none;
+		list-style-image:none;
 		width:100%;
 		margin:0px;
 		padding:0px;
@@ -45,6 +46,7 @@
 		li {
 			@include SiteMap-child-tabs();
 			list-style:none;
+			list-style-image:none;
 			background-color:$gray-300;
 
 			ul {

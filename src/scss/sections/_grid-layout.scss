@@ -5,33 +5,64 @@
 
     & > * {
         display:grid;
-        grid-template-columns: 10vw repeat(2, minmax(auto, 40vw)) 10vw;
+        display:-ms-grid;
+        grid-template-columns: 0vw repeat(2, minmax(auto, 50vw)) 0vw;
+        -ms-grid-columns: 0fr 1fr 1fr 0fr;
+    }
+    .logo > .hamburgerMenu {
+        grid-column: 2/3;
+        -ms-grid-column: 2;
+    }
+    .logo > a {
+        grid-column: 3/4;
+        -ms-grid-column: 3;
     }
     .siteNav > * {
         grid-column: 2/4;
-    }
-    .logo > a  {
-        grid-column: 3/4;
+        -ms-grid-column: 2;
+        -ms-grid-column-span:2;
     }
 }
 
 main {
     display:grid;
-    grid-template-columns: 10vw repeat(2, minmax(auto, 40vw)) 10vw; 
+    display:-ms-grid;
+    grid-template-columns: 0vw repeat(2, minmax(auto, 50vw)) 0vw;
+    -ms-grid-columns: 0fr 1fr 1fr 0fr;
+    grid-gap:0px 10px; 
 }
 
-@media screen and (max-width: $md) {
+@media screen and (min-width: $md) {
+
     #siteHeader {
 
         & > * {
-            grid-template-columns: 0vw repeat(2, minmax(auto, 50vw)) 0vw;
+            display:-ms-grid;
+            grid-template-columns: 10vw repeat(2, minmax(auto, 40vw)) 10vw;
+            -ms-grid-columns: 1fr 3fr 3fr 1fr;
+        }
+        .logo {
+        
+            & > .hamburgerMenu {
+                grid-column: 1/2;
+                display: none;
+            }
+            & > a {
+                grid-column: 2/4;
+                padding-right: 75%;
+            }
         }
     }
     main {
-        grid-template-columns: 0vw repeat(2, minmax(auto, 50vw)) 0vw;
+        grid-template-columns: 10vw repeat(2, minmax(auto, 40vw)) 10vw;
+        -ms-grid-columns: 1fr 3fr 3fr 1fr;
         margin:0px 20px;
 
         #dnn_heroImage { 
+            margin-left:-20px;
+            margin-right:-20px;
+        }
+        #dnn_secondFooter { 
             margin-left:-20px;
             margin-right:-20px;
         }
@@ -44,6 +75,7 @@ main {
 /************** START Hero Image **************/
 #dnn_heroImage { 
     grid-column:1/5;
+    -ms-grid-column-span: 5;
     margin-top:-20px;
 }
 /************** END Hero Image **************/
@@ -58,6 +90,12 @@ main {
         grid-gap:0px 1em;
         grid-template-columns: 1fr;
         grid-template-rows:repeat($rows, auto);
+        //-ms prefixes
+        display: -ms-grid;
+        -ms-grid-column:2;
+        -ms-grid-column-span:2;
+        -ms-grid-columns:1fr;
+        -ms-grid-rows:repeat($rows, auto);
     }
     /************** END Mixin **************/
 
@@ -66,9 +104,11 @@ main {
 /********** START Top Pane ******************/
 #gridTopPane {
     @include subGrid(1);
+    -ms-grid-row:1;
 
     #dnn_TopPane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
 }
 /********** END Top Pane ******************/
@@ -78,18 +118,23 @@ main {
 /****************** START FA Column Pane ******************/
 #gridFAColPane {
     @include subGrid(4);
+    -ms-grid-row:2;
 
     #dnn_dFAColPane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_FBColPane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
     #dnn_FCColPane {
         grid-row:3/4;
+        -ms-grid-row:3;
     }
     #dnn_FDColPane {
         grid-row:4/5;
+        -ms-grid-row:4;
     }
 }
 /****************** END FA Column Pane ******************/
@@ -99,12 +144,15 @@ main {
 /****************** START 3/9 Pane ******************/
 #grid3-9 {
     @include subGrid(2);
+    -ms-grid-row:3;
 
     #dnn_LeftThreePane {
         grid-row:2/3; 
+        -ms-grid-row:2; 
     }
     #dnn_RightNinePane {
         grid-row:1/2;
+        -ms-grid-row:1;
 
         h1 {
             
@@ -121,12 +169,15 @@ main {
 /****************** START 6/6 Pane ******************/
 #grid6-6 {
     @include subGrid(2);
+    -ms-grid-row:4;
 
     #dnn_TopLeftPane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_TopRightPane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
 }
 /****************** END 6/6 Pane ******************/
@@ -136,12 +187,15 @@ main {
 /****************** START 8/4 Pane ******************/
 #grid8-4 {
     @include subGrid(2);
+    -ms-grid-row:5;
 
     #dnn_rpTop84Pane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_rpTop48Pane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
 }
 /****************** END 8/4 Pane ******************/
@@ -151,6 +205,7 @@ main {
 /************** START Content Pane **************/
 #dnn_contentPane {
     grid-column: 2/4;
+    -ms-grid-column: 2;
 }
 /************** END Content Pane **************/
 
@@ -159,12 +214,15 @@ main {
 /****************** START 4/8 Pane ******************/
 #grid4-8 {
     @include subGrid(2);
+    -ms-grid-row:6;
 
     #dnn_rpbot84Pane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_rpBot48Pane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
 }
 /****************** END 4/8 Pane ******************/
@@ -174,15 +232,19 @@ main {
 /****************** START 3/6/3 Pane ******************/
 #grid3-6-3 {
     @include subGrid(3);
+    -ms-grid-row:7;
 
     #dnn_LeftPane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_CenterPane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
     #dnn_RightPane {
         grid-row:3/4;
+        -ms-grid-row:3;
     }
 }
 /****************** END 3/6/3 Pane ******************/
@@ -192,12 +254,15 @@ main {
 /****************** START 9/3 ******************/
 #grid9-3 {
     @include subGrid(2);
+    -ms-grid-row:8;
 
     #dnn_LeftNinePane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_RightThreePane {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
 }
 /****************** END 9/3 ******************/
@@ -207,18 +272,23 @@ main {
 /****************** START 3/3/3/3 ******************/
 #gridFAColPane2 {
     @include subGrid(4);
+    -ms-grid-row:9;
 
     #dnn_FAColPane1 {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_FAColPane2 {
         grid-row:2/3;
+        -ms-grid-row:2;
     }
     #dnn_FAColPane3 {
         grid-row:3/4;
+        -ms-grid-row:3;
     }
     #dnn_FAColPane4 {
         grid-row:4/5;
+        -ms-grid-row:4;
     }
 }
 /****************** END 3/3/3/3 ******************/
@@ -228,10 +298,13 @@ main {
 /****************** START Middle Pane ******************/
 #gridMiddlePane {
     @include subGrid(1);
+    -ms-grid-row:10;
 
     #dnn_MiddlePane {
         grid-column:1/2;
+        -ms-grid-column:1;
         grid-row:1/2;
+        -ms-grid-row:1;
     }
 }
 /****************** END Middle Pane ******************/
@@ -241,15 +314,19 @@ main {
 /****************** START 4/4/4 ******************/
 #gridTAColPane {
     @include subGrid(3);
+    -ms-grid-row:11;
 
     #dnn_TAColPane {
         grid-row:1/2;
+        -ms-grid-row:1;
     }
     #dnn_TBColPane {
-       grid-row:2/3;
+        grid-row:2/3;
+        -ms-grid-row:2;
     }
     #dnn_TCColPane {
-       grid-row:3/4;
+        grid-row:3/4;
+        -ms-grid-row:3;
     }
 }
 /****************** END 4/4/4 ******************/
@@ -259,10 +336,13 @@ main {
 /****************** START Bottom Pane ******************/
 #gridBottomPane {
     @include subGrid(1);
+    -ms-grid-row:12;
 
     #dnn_BottomPane {
         grid-column:1/2;
+        -ms-grid-column:1;
         grid-row:1/2;
+        -ms-grid-row:1;
    }
 }
 /****************** END Bottom Pane ******************/
@@ -272,13 +352,25 @@ main {
 /****************** START Admin Pane ******************/
 #gridAdminPane {
     @include subGrid(1);
+    -ms-grid-row:13;
 
     #dnn_AdminPane {
         grid-column:1/2;
+        -ms-grid-column:1;
         grid-row:1/2;
+        -ms-grid-row:1;
     }
 }
 /****************** END Admin Pane ******************/
+
+//
+
+/************** START Second Footer **************/
+#dnn_secondFooter { 
+    grid-column:1/5;
+    -ms-grid-column-span: 5;
+}
+/************** END Second Footer **************/
 
 //
 
@@ -287,143 +379,220 @@ main {
 
     #gridFAColPane {
         grid-template-columns:repeat(4, 1fr);
+        -ms-grid-columns:repeat(4, 1fr);
 
         #dnn_dFAColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_FBColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
         #dnn_FCColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:3/4;
+            -ms-grid-column:3;
         }
         #dnn_FDColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:4/5;
+            -ms-grid-column:4;
         }
     }
 
     #grid3-9 {
         grid-template-columns:1fr 3fr;
+        -ms-grid-columns:1fr 3fr;
 
         #dnn_LeftThreePane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2; 
+            -ms-grid-column:1; 
         }
         #dnn_RightNinePane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
     }
 
     #grid6-6 {
         grid-template-columns:repeat(2, 1fr);
+        -ms-grid-columns:repeat(2, 1fr);
 
         #dnn_TopLeftPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_TopRightPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
     }
 
     #grid8-4 {
         grid-template-columns:2fr 1fr;
+        -ms-grid-columns:2fr 1fr;
 
         #dnn_rpTop84Pane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_rpTop48Pane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
     }
 
     #grid4-8 {
         grid-template-columns:1fr 2fr;
+        -ms-grid-columns:1fr 2fr;
 
         #dnn_rpbot84Pane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_rpBot48Pane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
     }
 
     #grid3-6-3 {
         grid-template-columns:1fr 2fr 1fr;
+        -ms-grid-columns:1fr 2fr 1fr;
 
         #dnn_LeftPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_CenterPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
         #dnn_RightPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:3/4;
+            -ms-grid-column:3;
         }
     }
 
     #grid9-3 {
         grid-template-columns:3fr 1fr;
+        -ms-grid-columns:3fr 1fr;
 
         #dnn_LeftNinePane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_RightThreePane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
     }
 
     #gridFAColPane2 {
         grid-template-columns:repeat(4, 1fr);
+        -ms-grid-columns:repeat(4, 1fr);
 
         #dnn_FAColPane1 {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_FAColPane2 {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
         #dnn_FAColPane3 {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:3/4;
+            -ms-grid-column:3;
         }
         #dnn_FAColPane4 {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:4/5;
+            -ms-grid-column:4;
         }
     }
 
     #gridTAColPane {
         grid-template-columns:repeat(3, 1fr);
+        -ms-grid-columns:repeat(3, 1fr);
 
         #dnn_TAColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:1/2;
+            -ms-grid-column:1;
         }
         #dnn_TBColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:2/3;
+            -ms-grid-column:2;
         }
         #dnn_TCColPane {
             grid-row:1/2;
+            -ms-grid-row:1;
             grid-column:3/4;
+            -ms-grid-column:3;
         }
     }
 }
 /****************** END Pane Breakpoints ******************/
+
+
+
+
+
+
+/****************** START Blank Theme Overrides ******************/
+#blank-theme {
+    padding:10px 0px;
+
+    #gridHeroImage { 
+        grid-column:1/5;
+        -ms-grid-column:1;
+    }
+    #gridContentPane { 
+        grid-column:2/4;
+        -ms-grid-column:2;
+    }
+}
+/****************** END Blank Theme Overrides ******************/

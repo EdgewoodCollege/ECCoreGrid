@@ -5,7 +5,7 @@
   <!--#include file="partials/_header.ascx" -->
   <!-- Main Content -->
   <main role="main">
-    <div id="heroImage" class="" runat="server"></div>
+    <div id="heroImage" runat="server"></div>
     <!-- <div class="container-fluid">
       <div id="TopPaneFluid" class="col-md-12" runat="server"></div>
     </div> -->
@@ -78,7 +78,8 @@
     <div id="gridAdminPane">
       <div id="AdminPane" runat="server"></div>
     </div>
-
+  
+    <div id="secondFooter" runat="server"></div>
   </main>
 
   <!-- The page -->
@@ -86,6 +87,3 @@
   <!-- Footer -->
   <!--#include file="partials/_footer.ascx" -->
   <!--#include file="partials/_mMenu.ascx" -->
-
-
-

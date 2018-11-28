@@ -1,0 +1,56 @@
+/* _fastFacts--sm.scss */
+
+
+@media (max-width: 768px) {
+
+//    .fastFacts .fact .fastFacts {
+//        .facts {
+//            display: block !important;
+//            .fact {
+//                width: 100% !important;
+//                .image-wrap {
+//                    margin-bottom: 20px !important;
+//                }
+//                &.middle {
+//                    border: none;
+//                }
+//            }
+//        }
+//    }
+
+//    @media (max-width: 480px) {
+//        .fast_facts .fact {
+//            padding: 0 !important;
+//        }
+//    }
+	
+	.factsRow {
+ 
+    .section-title {
+    }
+    .facts {
+        &:last-child {
+        }
+        .fact {
+            .image-wrap {
+                img {
+                }
+            }
+            h3 {
+            }
+            .txt {
+            }
+            &.middle {
+				border:none;
+            }
+
+        }
+
+        
+    }
+}
+
+}
+
+// _4upReveal.scss
+

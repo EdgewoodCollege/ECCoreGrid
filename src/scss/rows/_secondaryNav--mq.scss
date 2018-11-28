@@ -1,0 +1,62 @@
+// _secondaryNav--mq.scss
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) { .secondaryNav--hamburger {
+		display: none;
+	}
+	#secondaryNav {
+			padding: 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+		display: flex;
+        li {
+            list-style-type: none;
+            margin: 0;
+            float: left;
+            	padding: 8px 30px 8px 30px;
+            display: flow-root;
+            align-items: center;
+            cursor: pointer;
+            transition:all .5s ease-in-out;
+			&.active {
+				background-color: $red;
+                transition:all .5s ease-in-out;
+			}
+            &:hover{
+                background-color: $red;
+                transition:all .5s ease-in-out;
+            }
+            a {
+                color: #fff;
+                transition:all .5s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                
+        }
+        }
+    }
+}
+
+	
+	
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) { 
+	
+	
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {  }
