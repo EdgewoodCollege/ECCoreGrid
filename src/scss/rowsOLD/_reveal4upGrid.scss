@@ -1,0 +1,63 @@
+// _4upReveal.scss 
+.reveal4up {
+     text-align: center;
+     position: relative;
+     .background{
+         &.redTopFade:before {
+             content: '';
+             position: absolute;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             left: 0;
+             height: 100px;
+             background-image: linear-gradient(to bottom, rgba(143, 19, 36, 1) 0%, rgba(143, 19, 36, 0));
+        }
+    }
+     .stripe {
+         top: -39px;
+    }
+     .child {
+         height: 500px;
+         background-position: center top;
+         background-size: cover;
+         padding: 0;
+         h2 {
+             color: #fff;
+             margin-bottom: 30px;
+        }
+         img {
+             width: 100%;
+        }
+         &:hover {
+             text-decoration: none;
+             .table-wrap {
+                 //Let's find/make a variable for this background-color: rgba(181, 45, 67, 0.9);
+                 .main-title {
+                     display: none;
+                }
+                 .description {
+                     display: block;
+                     opacity: 1;
+                }
+            }
+        }
+         .table-wrap {
+             -webkit-transition: background-color 0.5s;
+             -o-transition: background-color 0.5s;
+             transition: background-color 0.5s;
+             background-color: transparent;
+             .description {
+                 -webkit-transition: opacity 2s linear;
+                 -o-transition: opacity 2s linear;
+                 transition: opacity 2s linear;
+                 color: #ffffff;
+                 display: none;
+                 opacity: 0;
+                 overflow: hidden;
+                 padding: 0 15px;
+            }
+        }
+    }
+}
+ 

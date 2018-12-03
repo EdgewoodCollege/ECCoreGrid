@@ -1,6 +1,6 @@
 //_row1ColOverlay.scss
 
-$row1ColOverlay-bg--Colors: (Red $red #fff) (Black $black #fff) (Grey $grey #000) (White $white #000);
+$row1ColOverlay-bg--Colors: ("Red" $red #fff) ("Black" $black #fff) ("Grey" $grey #000) ("White" $white #000);
 
 @mixin row1ColOverlay-h1 ($color) {
     font-size: 2.7rem;
@@ -93,7 +93,6 @@ $row1ColOverlay-bg--Colors: (Red $red #fff) (Black $black #fff) (Grey $grey #000
 
 //********* START the color Modfiers to make the row have different colors for bg and txt *******************/
 //Im' using this to add the background color variable for each row. Parametors are in  () (FriendlyName, BG Color, Text Color) and those three bits of data are the passed variables
-$row1ColOverlay-bg--Colors: (Red #8f1324 #fff) (Black #000 #fff) (Grey #ccc #000) (White #fff #000);
 
 @each $row in $row1ColOverlay-bg--Colors {
     $names: nth($row, 1);
