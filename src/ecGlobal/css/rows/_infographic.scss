@@ -1,0 +1,342 @@
+// _infographic.scss
+
+
+@mixin infographic-h1 ($color) {
+	font-size: 60px;
+	color: $color;
+	margin: 0 auto 20px auto; 
+	text-align: center;
+	&:after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 30%;
+		border-bottom: 5px dotted #999;
+	}
+}
+
+
+.infographic {
+	padding: 0px 0 50px 0;
+	margin: auto;
+	//max-width: 1200px;
+	width: 100%;
+	position: relative;
+	.background {
+		h1 {
+			@include infographic-h1 (#000);
+		}
+	}
+	.prestige {
+		-webkit-transition: top 0.5s, opacity 0.7s;
+		-o-transition: top 0.5s, opacity 0.7s;
+		transition: top 0.5s, opacity 0.7s;
+		//margin-bottom: 75px;
+		opacity: 1;
+		position: relative;
+		text-align: center;
+		top: 0;
+		&.noshow {
+			opacity: 0;
+			top: 15px;
+		}
+		.prestige-item {
+			&.col-sm-4 {
+				width: 29%;
+			}
+			&.middle {
+				width: 42%;
+				&:before {
+					left: 0;
+				}
+			}
+			.title {
+				font-size: 53px;
+				line-height: 67px;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+			.subhead {
+				font-size: 24px;
+				line-height: 30px;
+				margin-bottom: 0;
+				font-family: 'Roboto Condensed', 'helvetica', 'arial', sans-serif;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $red;
+			}
+			.link {
+				font-weight: 400;
+				font-style: normal;
+				margin-bottom: 0;
+				font-size: 20px;
+				a {
+					text-decoration: underline;
+				}
+			}
+			.prestige-item {
+				.link {
+					font-weight: 400;
+					font-style: normal;
+					margin-bottom: 0;
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Not sure why I can't include this above. 
+.infographic .prestige .prestige-item.middle:before {
+	left: 0;
+}
+
+.value {
+	.stat {
+		margin: auto auto 30px auto;
+		max-width: 665px;
+		table-layout: auto;
+		width: 100%;
+		&:before {
+			content: " ";
+			display: table;
+		}
+		&:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+		canvas {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			margin-right: 40px;
+		}
+		.stat-text {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 0;
+			font-family: 'Roboto Condensed', 'helvetica', 'arial', sans-serif;
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $red;
+			.num {
+				font-size: 53px;
+				line-height: 67px;
+				margin-bottom: inherit;
+			}
+			.small {
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 0;
+				font-family: 'Crimson Text', 'verdana', sans-serif;
+				text-transform: lowercase;
+				font-weight: 600;
+				color: #000000;
+			}
+		}
+	}
+}
+
+.infographic {
+	.program-stats {
+		-webkit-transition: top 0.5s, opacity 0.7s;
+		-o-transition: top 0.5s, opacity 0.7s;
+		transition: top 0.5s, opacity 0.7s;
+		//max-width: 780px; 
+		margin: auto auto;
+		opacity: 1;
+		position: relative;
+		text-align: center;
+		top: 0;
+		width: 100%;
+		&.noshow {
+			opacity: 0;
+			top: 15px;
+		}
+		.blue-box {
+			background: rgba(181, 45, 67, 0.3);
+			margin: auto auto 40px auto;
+			padding: 30px;
+			.title {
+				font-size: 30px;
+				line-height: 42px;
+				margin-bottom: 0;
+				//font-family: 'Roboto Condensed', 'helvetica', 'arial', sans-serif;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $red;
+			}
+			.subhead {
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 0;
+				//font-family: 'Crimson Text', 'verdana', sans-serif;
+				text-transform: lowercase;
+				font-weight: 600;
+				color: #000000;
+			}
+		}
+		.user-stats {
+			.users {
+				margin-bottom: 20px;
+				.fa {
+					color: rgba(181, 45, 67, 0.4);
+					padding: 0 1px;
+					font-size: 36px;
+					line-height: 42px;
+					&.filled {
+						color: $red;
+						//line-height: 67px;
+					}
+				}
+			}
+			.ratio {
+				width: 100%;
+				padding: 0 15px;
+				position: relative;
+			}
+			.average {
+				width: 100%;
+				padding: 0 15px;
+				position: relative;
+				&:after {
+					width: 2px;
+					height: 100%;
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 0;
+					border-left: 1px dotted #000;
+				}
+				&:before {
+					width: 2px;
+					height: 100%;
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 0;
+					border-left: 1px dotted #000;
+					left: 0;
+				}
+				.users {
+					.fa {
+						font-size: 30px;
+					}
+				}
+			}
+			.undergrads {
+				width: 100%;
+				padding: 0 15px;
+				position: relative;
+				.users {
+					.fa {
+						font-size: 18px;
+					}
+				}
+			}
+			.title {
+				font-size: 24px;
+				line-height: 30px;
+				margin-bottom: 0;
+				//font-family: 'Roboto Condensed', 'helvetica', 'arial', sans-serif;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $red;
+				.big {
+					font-size: 53px;
+					line-height: 67px;
+					margin-bottom: 0;
+				}
+			}
+			.subhead {
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 0;
+				//font-family: 'Crimson Text', 'verdana', sans-serif;
+				text-transform: lowercase;
+				font-weight: 600;
+				color: #000000;
+			}
+			.container {
+				display: flex;
+				align-items: flex-end;
+			}
+		}
+	}
+}
+
+#chartGrantsScholarshipsContainer {
+	width: 165px;
+	margin: auto;
+}
+
+#chartGradsContainer {
+	width: 165px;
+	margin: auto;
+}
+
+.infographic3up {
+    padding: 0px 0 0px 0;
+		position: relative;
+    .container {
+        .row {
+            //display: flex;
+            //align-items: flex-end;
+
+            .col-md-4 {
+                //display: flex;
+                text-align: center;
+				padding: 0 25px 25px 25px;
+                img {
+					background-color: #fff;
+					border-radius: 50%;
+
+				}
+                .title {
+                    color: #8f1324;
+                    font-weight: 900;
+                    font-size: 30px;
+                }
+                &:nth-child(2) {
+                    &:before {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+	.infographic3up {
+    padding: 50px 0 50px 0;
+    .container {
+        .row {
+            .col-md-4 {
+                img {
+				}
+                .title {
+                }
+                &:nth-child(2) {
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        margin: 0 auto;
+                        width: 100%;
+                        border-left: 4px dotted #999;
+                        border-right: 4px dotted #999;
+                        height: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+	}}

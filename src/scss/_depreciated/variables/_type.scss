@@ -1,0 +1,11 @@
+/******		|| TYPE ||		******/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800');
+$open-sans: 'Open Sans', sans-serif !default;
+
+// FLUID CALCULATION ALGORITHM || calc([min-font] + [max-font - min-font] * ((100vw - [min-screen-width]) / [max-screen-width - min-screen-width]) ||
+    // SOURCED FROM     || https://css-tricks.com/snippets/css/fluid-typography/ ||
+$min-font-size:14px  !default;
+$fluid-font-size:calc(14px + 8 * ((100vw - 624px) / 1000))  !default;
+$max-font-size:20px  !default;
+

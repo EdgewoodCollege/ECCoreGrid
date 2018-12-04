@@ -1,0 +1,71 @@
+/* _titleRow.scss */
+
+@mixin titleRow-h1 ($color) {
+	font-size: 60px;
+	color: $color;
+	margin: 0 auto 20px auto; 
+	text-align: center;
+	&:after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 30%;
+		border-bottom: 5px dotted #999;
+	}
+}
+
+
+ @each $row in $rowTypes {
+  $names: nth($row, 1);
+  $bgColor: nth($row, 2);
+  $txtColor: nth($row, 3);
+  
+	.titleRow#{$names} {
+		text-align: center;
+		height: auto;
+		overflow: hidden;
+		background-color: $bgColor;
+		position: relative;
+		.background {
+			position: relative;
+		}
+		.content {
+			bottom: 0;
+			width: 100%; 
+			color: $txtColor;
+			padding: 30px 30px 30px 30px;
+			position: relative;
+			max-width: 1200px;
+			margin: auto;
+			h1 {
+				@include titleRow-h1 ($txtColor);
+			}
+			.subtitle {
+				//line-height: 30px;
+				padding: 0px 0 20px 0;
+				font-size: 30px;
+				max-width: 1200px;
+				margin: auto;
+
+			} 
+			.text {
+				padding:0px 0 20px 0;
+				//margin: auto;
+			}
+		}
+		.fa {
+			font-size: 30px;
+			color: $txtColor;
+			left: 50%; 
+			margin: 18px 0 0 0;
+		}
+	}
+}
+
+
+
+//}
+
+
+// *************** End managing Row Modifications ******************************/
+

@@ -1,0 +1,36 @@
+/* _media-queries.scss */
+
+
+ 
+
+//Media query versions
+@import 'checkerboard--mq';
+@import 'ctaRow--mq';
+@import 'factsRow--mq';
+@import 'infographic--mq';
+@import 'reveal4up--mq';
+//@import 'reveal4up2';   MISSING
+//@import 'reveal4upGrid'; MISSING
+@import 'row1ColOverlay--mq';
+//@import 'row1ColText';  MISSING
+@import 'row2ColMedia--mq';
+@import 'row2ColPdf--mq';
+@import 'rowReveal4Up--mq';
+@import 'titleRow--mq';
+
+
+
+//Below is the template for Media Query breakpoints.  These are based off bootstrap 4
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {  }

@@ -1,0 +1,20 @@
+/* _4upReveal--sm.scss */
+
+@media (max-width: 992px) {
+  
+	.reveal4up {
+		.child {
+			.table-wrap {
+				    background-color: rgba(181, 45, 67, 0.9);
+				.main-title {
+					    display: none;
+				}
+				.description {
+					display: block;
+    				opacity: 1;
+				}
+			}
+		}
+	} 
+}
+

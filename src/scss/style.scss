@@ -1,10 +1,17 @@
-@import 'variables/variables';
+//@import 'variables/variables';
+@import '../ecGlobal/css/variables/variables';
+@import '../ecGlobal/css/utilities/utilities';
+
+@import '../ecGlobal/css/rows/rows';
+
+
 @import 'mixins/mixins';
 @import 'base';
 @import 'components/components';
 @import 'pages/pages';
 @import 'sections/sections';
 @import 'xmod/xmod';
-@import 'rows/styles';
+//@import 'rows/styles';
 @import './node_modules/hamburgers/_sass/hamburgers/hamburgers';
 @import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+

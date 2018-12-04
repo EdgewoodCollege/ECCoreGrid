@@ -1,0 +1,83 @@
+/* _ctaRow.scss */
+
+@mixin ctaRow-h1 ($color) {
+	font-size: 60px;
+	color: $color;
+	margin: 0 auto 20px auto; 
+	text-align: center;
+	&:after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 30%;
+		border-bottom: 5px dotted #999;
+	}
+}
+
+
+
+#ctaRow {
+		font-weight: 600;
+		background-position: center top;
+		background-size: cover;
+		height:calc(100vh - 197px);
+		padding: 0 0 50px 0;
+		text-align: center;
+
+	h1 {
+		 @include ctaRow-h1 ($red);
+		
+	}
+	.h1-pre {
+		font-size: 30px;
+		line-height: 36px;
+		margin: 20px 0px 0px 0px;
+		font-weight: 700;
+		font-style: italic;	
+	}
+	.text {
+		font-size: 20px;
+		line-height: 30px;
+		margin: 0 auto;
+		font-weight: 600;
+		max-width: 800px;
+		padding: 15px 0 0 0;
+	}
+	.info-box {
+		background: rgba(250, 250, 250, 0.9);
+		margin-top: 20px;
+		padding:15px 0px;
+
+		.title {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 0;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $red;
+		}
+		.item {
+			padding:20px 15px 10px 15px;
+
+			&.left {
+				padding:0px;
+			}
+			&.left:after,  {
+				width: 2px;
+				height: 100%;
+				border-left:2px dotted gray;
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.table-wrap {
+				padding:0px 20px;
+
+				.callout-button-red, .callout-button-blue {
+					margin-bottom:25px;
+				}
+			}
+		}
+	}
+}

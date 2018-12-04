@@ -1,0 +1,103 @@
+/* Scss Document */
+
+//********* START the color Modfiers to make the row have different colors for bg and txt *******************/
+//Im' using this to add the background color variable for each row. Parametors are in  () (FriendlyName, BG Color, Text Color) and those three bits of data are the passed variables
+$row2ColMedia-bg--Colors: ("Red" #8f1324 #fff) ("Black" #000 #fff) ("Grey" #ccc #000) ("White" #fff #000);
+
+
+
+@mixin row2ColMedia-h1 () {
+    font-size: 2.7rem;
+    //color: $color;
+    margin: 0 auto 20px;
+    font-weight: 400;
+    &:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+    }
+}
+//********* START the primary styling for this row type *******************/
+.row2ColMedia {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    align-items: center;
+
+    padding: 0;
+    //Setting the default grid
+    grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
+    grid-template-rows: auto;
+    grid-template-areas: "media media media media" "mediaContent mediaContent mediaContent mediaContent";
+
+    .mediaContent {
+        grid-area: mediaContent;
+        padding: 3rem 1.5rem;
+        h1 {
+            @include row2ColMedia-h1 ();
+        }
+        a {
+            font-weight: bold;
+
+        }
+
+        .subtitle {
+            padding: 0 0 20px;
+            font-size: 1.4rem;
+            margin: auto;
+
+        }
+        .text {
+            padding: 0 0 20px;
+        }
+    }
+    .media {
+        grid-area: media;
+        height: 100%;
+        width:100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}
+//********* END the primary styling for this row type *******************/
+
+//********* START the layout Modfiers to make the VID on the left or right *******************/
+
+.row2ColMedia-grid--mediaLeft {
+    grid-template-rows: auto;
+    grid-template-areas: "media media media media"
+        "mediaContent mediaContent mediaContent mediaContent";
+}
+.row2ColMedia-grid--mediaRight {
+    grid-template-rows: auto;
+    grid-template-areas: "media media media media"
+        "mediaContent mediaContent mediaContent mediaContent";
+
+}
+
+//********* END the layout Modfiers to make the VID on the left or right *******************/
+
+
+@each $row in $row2ColMedia-bg--Colors {
+    $names: nth($row, 1);
+    $bgColor: nth($row, 2);
+    $txtColor: nth($row, 3);
+
+    .row2ColMedia-bg--#{$names} {
+        background-color: $bgColor;
+        color: $txtColor;
+        a {
+            color: $txtColor;
+
+        }
+
+    }
+}
+//********* END the color Modfiers to make the row have different colors for bg and txt *******************/

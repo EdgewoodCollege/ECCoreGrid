@@ -1,10 +1,17 @@
-/******		|| TYPE ||		******/
+/* _fonts.scss */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800');
-$open-sans: 'Open Sans', sans-serif !default;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+
+$roboto: 'Roboto', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+
+
 
 // FLUID CALCULATION ALGORITHM || calc([min-font] + [max-font - min-font] * ((100vw - [min-screen-width]) / [max-screen-width - min-screen-width]) ||
     // SOURCED FROM     || https://css-tricks.com/snippets/css/fluid-typography/ ||
 $min-font-size:14px  !default;
 $fluid-font-size:calc(14px + 8 * ((100vw - 624px) / 1000))  !default;
 $max-font-size:20px  !default;
+
