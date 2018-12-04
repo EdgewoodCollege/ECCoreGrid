@@ -1,0 +1,17 @@
+/* _introLarge--sm.scss */
+
+@media (max-width: 992px) {
+
+    .introLarge {
+        height: 900px !important;
+        .content {
+
+            h1 {
+                font-size: 36px;
+            }
+            .subtitle {}
+
+        }
+        .fa {}
+    }
+}

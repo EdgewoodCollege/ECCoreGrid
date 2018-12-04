@@ -1,0 +1,41 @@
+/* _fastFacts--sm.scss */
+
+@media (max-width: 768px) {
+
+    .factsRow {
+
+        .section-title {}
+        .facts {
+            &:last-child {}
+            .fact {
+                .image-wrap {
+                    img {}
+                }
+                h3 {}
+                .txt {}
+                &.middle {
+                    border: none;
+                }
+
+            }
+
+        }
+    }
+
+}
+
+
+//Below is the template for Media Query breakpoints.  These are based off bootstrap 4
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {  }

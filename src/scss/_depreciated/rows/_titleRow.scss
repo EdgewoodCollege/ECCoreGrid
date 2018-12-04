@@ -1,8 +1,6 @@
 /* _titleRow.scss */
 
 
-//Im' using this to create 4 rows, each paramater is in () and those three bits of data are the passed variables
-$rowTypes: (Red #8f1324 #fff) (Black #000 #fff) (Grey #ccc #000) (White #fff #000);
 
  @each $row in $rowTypes {
   $names: nth($row, 1);

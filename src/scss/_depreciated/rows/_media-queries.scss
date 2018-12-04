@@ -1,25 +1,24 @@
 /* _media-queries.scss */
 
 
-//overwriting a SF style on moble
-@media (max-width: 30em) {
-.sf-contentblock {
-    margin-bottom: 0;
-}
-}
  
-@import 'utility--mq';
-@import 'ctaRow--mq';
-@import 'reveal4up--mq';
-@import 'row2ColPdf--mq';
-@import 'row2ColMedia--mq';
-@import 'introLarge--mq';
-@import 'infographic--mq';
-@import 'fastFacts--mq';
-@import 'titleRow--mq';
+
+//Media query versions
 @import 'checkerboard--mq';
-@import 'secondaryNav--mq';
-@import 'freshman--mq';
+@import 'ctaRow--mq';
+@import 'factsRow--mq';
+@import 'infographic--mq';
+@import 'reveal4up--mq';
+//@import 'reveal4up2';   MISSING
+//@import 'reveal4upGrid'; MISSING
+@import 'row1ColOverlay--mq';
+//@import 'row1ColText';  MISSING
+@import 'row2ColMedia--mq';
+@import 'row2ColPdf--mq';
+@import 'rowReveal4Up--mq';
+@import 'rowTitleRow--mq';
+@import 'titleRow--mq';
+
 
 
 //Below is the template for Media Query breakpoints.  These are based off bootstrap 4
