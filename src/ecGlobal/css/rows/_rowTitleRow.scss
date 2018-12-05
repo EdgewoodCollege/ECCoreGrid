@@ -1,0 +1,93 @@
+/* _rowTitleRow.scss */
+
+//Im' using this to add the background color variable for each row. Parametors are in  () (FriendlyName, BG Color, Text Color) and those three bits of data are the passed variables
+$rowTitlerow-bg--Colors: ("Red" #8f1324 #fff) ("Black" #000 #fff) ("Grey" #ccc #000) ("White" #fff #000);
+
+
+
+@mixin rowTitlerow-h1 () {
+    font-size: 2.7rem;
+    //color: $color;
+    margin: 0 auto 20px;
+    font-weight: 400;
+    &:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+		border-bottom: 5px dotted;
+    }
+}
+//********* START the primary styling for this row type *******************/
+.rowTitlerow {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    align-items: center;
+		background-position: center;
+	background-size:cover;
+    
+    padding: 3% 3%;
+    //Setting the default grid
+    grid-template-columns: 0vw minmax(auto, 100vw) 0vw;
+    grid-template-rows: auto;
+    text-align: center;
+    grid-template-areas:
+        
+        ". titlerowContent .";
+	
+
+    .titlerowContent {
+        grid-area: titlerowContent;
+        h1 {
+            @include rowTitlerow-h1 ();
+        }
+        a {
+            font-weight: bold;
+
+        }
+
+        .subtitle {
+            padding: 0 0 20px;
+            font-size: 1.4rem;
+            margin: auto;
+
+        }
+        .text {
+            padding: 0 0 20px;
+        }
+    }
+    
+}
+//********* END the primary styling for this row type *******************/
+
+
+//********* START the color Modfiers to make the row have different colors for bg and txt *******************/
+
+@each $row in $rowTitlerow-bg--Colors {
+    $names: nth($row, 1);
+    $bgColor: nth($row, 2);
+    $txtColor: nth($row, 3);
+
+    .rowTitlerow-bg--#{$names} {
+        background-color: $bgColor;
+        color: $txtColor;
+        a {
+            color: $txtColor;
+
+        }
+
+    }
+}
+//********* END the color Modfiers to make the row have different colors for bg and txt *******************/
+
+@media only screen and (min-width:768px) {
+    //default sizing for row
+    .rowTitlerow {
+        grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+        grid-column-gap: 15px;
+    grid-template-areas: ". titlerowContent .";
+    }
+
+}
