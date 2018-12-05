@@ -1,0 +1,18 @@
+/* _freshaman--sm.scss */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) { 
+.freshmanHero {
+	.background {
+		min-height: 400px;
+	}
+}}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {  }
