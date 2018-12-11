@@ -1,7 +1,10 @@
-//@import 'variables/variables';
-@import '../ecGlobal/css/variables/variables';
-@import '../ecGlobal/css/utilities/utilities';
-@import '../ecGlobal/css/rows/rows';
+//* Styles.scss */
+
+@import '../ecGlobal/variables/variables';
+@import '../ecGlobal/utilities/utilities';
+@import '../ecGlobal/rows/rows';
+@import '../ecGlobal/layouts/layouts';
+@import '../ecGlobal/components/components';
 
 
 @import 'mixins/mixins';
@@ -10,7 +13,6 @@
 @import 'pages/pages';
 @import 'sections/sections';
 @import 'xmod/xmod';
-//@import 'rows/styles';
 @import './node_modules/hamburgers/_sass/hamburgers/hamburgers';
 @import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 

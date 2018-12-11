@@ -10,6 +10,7 @@ var gulp          = require('gulp'),
     replace       = require('gulp-replace'),
     zip           = require('gulp-zip'),
     clean         = require('gulp-clean'),
+    cssnano      = require('cssnano'),
     sourcemaps    = require('gulp-sourcemaps'),
     path          = require('path'),
     details       = require('./project-details.json'),
@@ -53,28 +54,22 @@ gulp.task('images', function() {
 
 // Development CSS creation.
 // Checks for errors and concats. Minifies.
+
+
 gulp.task('scss', function() {
-
-  return gulp.src( './'+src+'scss/**/*.scss')
+  var plugins = [
+      autoprefixer,
+      cssnano
+  ];
+  return gulp.src( 'src/scss/**/*.scss') 
   .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(postcss([ autoprefixer({ grid: true }) ]))
-    .pipe(rename({suffix: '.min'}))
-    //.pipe(autoprefixer({browsers: ['last 2 versions', 'ie >= 9', '> 1%']}))
-		.pipe(gulp.dest( './'+dist+'/css/'))
-		.pipe(notify({message: 'Styles compiled successfully!', title : 'sass', sound: false}));
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss(plugins))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(sourcemaps.write(''))
+
+  .pipe(gulp.dest( './dist/css/'));
 });
-
-
-// return gulp.src('./src/scss/**/*.scss')
-//     .pipe( sourcemaps.init() )
-//     .pipe(sass().on('error', sass.logError))
-//     //setting grid value to true to help with MS Grid issues
-//     .pipe(postcss([ autoprefixer({ grid: true }) ]))
-//     .pipe( sourcemaps.write('.') )
-//     .pipe(gulp.dest('./dist/css/')
-
 
 /*
 *	JAVASCRIPT TASKS
@@ -118,8 +113,8 @@ gulp.task('js', function() {
 
 gulp.task('containers', function() {
   gulp.src('./containers/*')
-    .pipe(gulp.dest('../../Containers/'+project+'/'))
-    .pipe(notify({message: 'Containers updated!', title : 'containers', sound: false}));
+    .pipe(gulp.dest('../../Containers/'+project+'/'));
+    //.pipe(notify({message: 'Containers updated!', title : 'containers', sound: false}));
 });
 
 
@@ -159,8 +154,8 @@ gulp.task('manifest', function() {
     .pipe(replace(/\<skinName\>(.*?)(?=\<)/, '<skinName>'+project))
     .pipe(replace(/(\\Skins\\)(.*?)(?=\\)/g, '\\Skins\\'+project))
     .pipe(replace(/(\\Containers\\)(.*?)(?=\\)/g, '\\Containers\\'+project))
-    .pipe(gulp.dest('./'))
-    .pipe(notify({message: 'Manifest updated successfully!', title : 'manifest', sound: false}));
+    .pipe(gulp.dest('./'));
+    //.pipe(notify({message: 'Manifest updated successfully!', title : 'manifest', sound: false}));
 });
 
 
