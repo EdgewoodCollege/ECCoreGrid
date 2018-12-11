@@ -55,8 +55,6 @@ gulp.task('images', function() {
 // Checks for errors and concats. Minifies.
 gulp.task('scss', function() {
 
-
-
   return gulp.src( './'+src+'scss/**/*.scss')
   .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
