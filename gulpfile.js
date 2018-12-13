@@ -214,8 +214,9 @@ gulp.task('cleanup', function() {
 
 // gulp watch
 gulp.task('watch', function () {
-    gulp.watch( src+"scss/**/*.scss", ['scss'])
-    gulp.watch([ src+"js/**/*.js"], ['js'])
+  gulp.watch( src+"scss/**/*.scss", ['scss'])
+  gulp.watch( src+"ecGlobal/**/*.scss", ['scss'])
+  gulp.watch([ src+"js/**/*.js"], ['js'])
     gulp.watch( './containers/*', ['containers'])
     gulp.watch( './project-details.json', ['manifest'])
 });
