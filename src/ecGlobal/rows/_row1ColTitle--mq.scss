@@ -5,7 +5,7 @@
 /* Scss Document */
 @media only screen and (min-width:$md) {
     //default sizing for row
-    .rowTitlerow {
+    .row1ColTitle {
         grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
         grid-column-gap: 15px;
     grid-template-areas: ". titlerowContent .";
