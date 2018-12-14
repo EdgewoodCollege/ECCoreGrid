@@ -14,23 +14,27 @@
     //Setting the default grid
     grid-template-columns: 0vw minmax(auto, 100vw) 0vw;
     grid-template-rows: auto;
-    text-align: center;
+    // text-align: center;
     z-index: 0;
     grid-template-areas:
         ". titlerowContent .";
+
+
 
     .rowContent {
         grid-area: titlerowContent;
         z-index: 1;
 
         a {
-            font-weight: bold;
         }
 
+        h1 {}
+
     }
+
     .fa {
         font-size: 2rem;
-        left: 50%; 
+        left: 50%;
         margin: 18px 0 0 0;
     }
 
@@ -38,6 +42,28 @@
 
 //********* END the primary styling for this row type *******************/
 
+//********* START the left or right alignment  *******************/
+
+.row1ColTitle__align--left {
+    text-align: left;
+}
+
+.row1ColTitle__align--right {
+    text-align: right;
+}
+
+.row1ColTitle__align--center {
+    text-align: center;
+    .rowContent {
+        h1 {
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+//********* END the left or right alignment  *******************/
 
 //********* START the color Modfiers to make the row have different colors for bg and txt *******************/
 
@@ -46,15 +72,19 @@
     $bgColor: nth($row, 2);
     $txtColor: nth($row, 3);
 
-    .row1ColTitle__bg--#{$names} {
+    .row1ColTitle__style--#{$names} {
         background-color: $bgColor;
         color: $txtColor;
 
         a {
             color: $txtColor;
-
         }
 
+        .rowContent {
+            h1 {
+                color: $txtColor;
+            }
+        }
     }
 }
 

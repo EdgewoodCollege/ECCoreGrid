@@ -1,4 +1,4 @@
-$rowColors: ('Red' $red #fff) ('Black' #000 #fff) ('Grey' $grey #000) ('White' #fff #000);
+$rowColors: ('red' $red #fff) ('black' #000 #fff) ('grey' $grey #000) ('white' #fff #000);
 
 .rowContent {}
 
@@ -9,7 +9,7 @@ $rowColors: ('Red' $red #fff) ('Black' #000 #fff) ('Grey' $grey #000) ('White' #
 
     &:after {
         content: "";
-        display: block;
+        display: none;
         margin: 0 auto;
         width: 30%;
         border-bottom: 5px dotted;
@@ -34,14 +34,15 @@ $rowColors: ('Red' $red #fff) ('Black' #000 #fff) ('Grey' $grey #000) ('White' #
     font-family: 'Open Sans';
     font-weight: normal;
     border: none;
-    margin: 1rem;
+    margin: 1rem 0; 
     cursor: pointer;
     border: 1px solid #707070;
-    box-shadow: 2px 4px 5px -2px #8f8f8f;
+    box-shadow: 2px 4px 5px -2px rgba(#8f8f8f, 0);
     border-radius: 0.4rem;
+    display: inline-block;
 }
 
-$row-button-colors: ('Red'#8f1324 #fff) ('Black'#000 #fff) ('Grey'#ccc #000) ('White'#fff #000) ('Orange' $orange #fff) ('Blue' $blue #fff) ('Green' $green #fff);
+$row-button-colors: ('red'#8f1324 #fff) ('black'#000 #fff) ('grey'#ccc #000) ('white'#fff #000) ('orange' $orange #fff) ('blue' $blue #fff) ('green' $green #fff);
 
 @each $button in $row-button-colors {
     $names: nth($button, 1);
