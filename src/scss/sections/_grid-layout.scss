@@ -45,10 +45,13 @@ main {
         
             & > .hamburgerMenu {
                 grid-column: 1/2;
+                -ms-grid-column: 1;
                 display: none;
             }
             & > a {
                 grid-column: 2/4;
+                -ms-grid-column: 2;
+                -ms-grid-column-span:2;
                 padding-right: 75%;
             }
         }
@@ -366,7 +369,8 @@ main {
 //
 
 /************** START Second Footer **************/
-#dnn_secondFooter { 
+#dnn_secondFooter {
+    -ms-grid-row:14; 
     grid-column:1/5;
     -ms-grid-column-span: 5;
 }
@@ -577,10 +581,7 @@ main {
 }
 /****************** END Pane Breakpoints ******************/
 
-
-
-
-
+//
 
 /****************** START Blank Theme Overrides ******************/
 #blank-theme {
