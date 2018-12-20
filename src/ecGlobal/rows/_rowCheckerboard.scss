@@ -1,0 +1,90 @@
+/* _rowCheckerboard.scss */
+
+
+//********* START Core styling for this specific row *********//
+.rowCheckerboard {
+
+	.checkerboardPair {
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		grid-template-areas:
+			"mediaContent rowContent";
+			
+		.rowMedia {
+			background-position: center top;
+			background-size: cover;
+			height: 450px;
+			overflow: hidden;
+			padding: 0;
+			grid-area:"mediaContent";
+
+			.play-button {
+				color:$white;
+			}
+		}
+		.rowContent {
+			padding:0px 75px;
+			grid-area:"rowContent";
+
+			.rowText {
+				font-size:2em;
+			}
+		}
+	}
+}
+
+//********* END Core styling for this specific row *********//
+
+//********* START layout alignment  *********//
+
+.rowCheckerboard__grid--mediaLeft {
+	
+	.checkerboardPair {
+		grid-template-areas:
+			"mediaContent rowContent";
+		
+		&:nth-child(even) {
+			grid-template-areas:
+				"rowContent mediaContent";
+		}
+	}
+}
+.rowCheckerboard__grid--mediaRight {
+	
+	.checkerboardPair {
+		grid-template-areas:
+			"rowContent mediaContent";
+		
+		&:nth-child(even) {
+			grid-template-areas:
+				"mediaContent rowContent";
+		}
+	}
+}
+
+//********* END layout alignment  *********//
+
+//********* START Style modfiers to change row variables *********//
+
+@each $row in $rowColors {
+    $names: nth($row, 1);
+    $bgColor: nth($row, 2);
+    $txtColor: nth($row, 3);
+
+    .rowCheckerboard__style--#{$names} {
+        background-color: $bgColor;
+        color: $txtColor;
+
+        a {
+            color: $txtColor;
+        }
+
+        .rowContent {
+            h1 {
+                color: $txtColor;
+            }
+        }
+    }
+}
+
+//********* END Style modfiers to change row variables *********//

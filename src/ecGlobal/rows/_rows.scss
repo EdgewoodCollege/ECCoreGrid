@@ -1,8 +1,8 @@
 /* CSS Document */
+/* autoprefixer grid: on */
 
 //Keeping the common classes for rows only here
 @import '_utilities/utilities';
-
 
 
 @import 'checkerboard';
@@ -20,8 +20,8 @@
 @import 'row1ColTitle';
 @import 'titleRow';
 
+@import 'rowInfographic';
+@import 'rowCheckerboard';
 
-@import 'media-queries'
 
-
-
+@import 'media-queries';

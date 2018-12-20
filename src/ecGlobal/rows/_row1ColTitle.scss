@@ -1,7 +1,8 @@
-/* _rowTitleRow.scss */
+/* _row1ColTitle.scss */
+/* autoprefixer grid: on */
 
+//********* START Core styling for this specific row *********//
 
-//********* START the primary styling for this row type *******************/
 .row1ColTitle {
     height: auto;
     overflow: hidden;
@@ -11,25 +12,16 @@
     background-position: center;
     background-size: cover;
     padding: 3rem 0;
-    //Setting the default grid
+        //Setting the default grid
     grid-template-columns: 0vw minmax(auto, 100vw) 0vw;
     grid-template-rows: auto;
-    // text-align: center;
     z-index: 0;
     grid-template-areas:
-        ". titlerowContent .";
+        ". rowContent .";
 
-
-
-    .rowContent {
-        grid-area: titlerowContent;
+    > .rowContent {
+        grid-area: rowContent;
         z-index: 1;
-
-        a {
-        }
-
-        h1 {}
-
     }
 
     .fa {
@@ -37,12 +29,11 @@
         left: 50%;
         margin: 18px 0 0 0;
     }
-
 }
 
-//********* END the primary styling for this row type *******************/
+//********* END Core styling for this specific row *********//
 
-//********* START the left or right alignment  *******************/
+//********* START layout alignment  *********//
 
 .row1ColTitle__align--left {
     text-align: left;
@@ -63,9 +54,9 @@
     }
 }
 
-//********* END the left or right alignment  *******************/
+//********* END layout alignment  *********//
 
-//********* START the color Modfiers to make the row have different colors for bg and txt *******************/
+//********* START Style modfiers to change row variables *********//
 
 @each $row in $rowColors {
     $names: nth($row, 1);
@@ -88,4 +79,4 @@
     }
 }
 
-//********* END the color Modfiers to make the row have different colors for bg and txt *******************/
+//********* END Style modfiers to change row variables *********//
