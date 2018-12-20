@@ -4,18 +4,17 @@
 //*** NEW STLYE ***/
 
 .rowInfographic {
-	display:grid;
-	grid-template-columns:1fr;
-	justify-items:center;
-	padding: 0px 0 50px 0; /* Check if this is moved into REM */
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding: 0 0 3rem;
 	margin: auto;
 	//max-width: 1200px;
 	width: 100%;
 	position: relative;
 
 	.infographic {
-		text-align:center;
-
+		text-align: center;
 		img {
 			width: 110px;
 			height: 110px;
@@ -47,7 +46,7 @@
         color: $txtColor;
 
         a {
-            color: $txtColor;
+            //color: $txtColor;
         }
 		.rowTitle {
 			color: $txtColor;
