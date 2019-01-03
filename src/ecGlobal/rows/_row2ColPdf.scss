@@ -1,22 +1,19 @@
 /* _row2ColPdf.scss */
 
-
 //********* START Core styling for this specific row *********//
 
 .row2ColPdf {
     height: auto;
     overflow: hidden;
     position: relative;
-    padding: 3rem 3rem;
+    padding: 3rem;
 
     .rowContent {
         //Setting the default grid
         display: grid;
         grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
         grid-template-rows: auto;
-        grid-template-areas:
-            "rowPdf rowPdf rowPdf rowPdf"
-            "rowText rowText rowText rowText";
+        //grid-template-areas: "rowPdf rowPdf rowPdf rowPdf" "rowText rowText rowText rowText" "rowCTA rowCTA rowCTA rowCTA";
         align-items: center;
 
         .rowText {
@@ -26,9 +23,12 @@
         .rowPdf {
             grid-area: rowPdf;
             img {
-                width:100%;
+                width: 100%;
                 max-width: 200px;
             }
+        }
+        .rowCTA {
+            grid-area: rowCTA;
         }
     }
 }
@@ -38,16 +38,16 @@
 //********* START layout alignment  *********//
 
 .row2ColPdf__grid--pdfLeft {
-grid-template-rows: auto;
-grid-template-areas:
-    "rowPdf rowPdf rowPdf rowPdf"
-    "rowText rowText rowText rowText";
+    grid-template-rows: auto;
+    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
+    "rowText rowText rowText rowText"
+    "rowCTA rowCTA rowCTA rowCTA";
 }
 .row2ColPdf__grid--pdfRight {
-grid-template-rows: auto;
-grid-template-areas:
-    "rowPdf rowPdf rowPdf rowPdf"
-    "rowText rowText rowText rowText";
+    grid-template-rows: auto;
+    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf" 
+    "rowText rowText rowText rowText" 
+    "rowCTA rowCTA rowCTA rowCTA";
 }
 
 //********* END layout alignment  *********//

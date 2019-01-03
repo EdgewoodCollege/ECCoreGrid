@@ -1,20 +1,22 @@
 /* _row2ColPdf--mq */
 
-@media only screen and (min-width:$md) {
+@media only screen and (min-width: $md) {
     //Default layout for row
     .row2ColPdf {
 
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
+            grid-template-rows: auto;
             grid-column-gap: 15px;
-            grid-template-areas: ". rowPdf rowText .";
+            grid-template-areas: ". rowText rowPdf ." ". rowCTA rowCTA .";
         }
     }
     .row2ColPdf__grid--pdfLeft {
 
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
-            grid-template-areas: ". rowPdf rowText .";
+            grid-template-rows: auto;
+            grid-template-areas: ". rowPdf rowText ." ". rowCTA rowCTA .";
             grid-column-gap: 15px;
         }
     }
@@ -22,8 +24,9 @@
         
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 65vw) minmax(auto, 15vw) 10vw;
-            grid-template-areas: ". rowText rowPdf .";
+            grid-template-rows: auto;
+            grid-template-areas: ". rowText rowPdf ." ". rowCTA rowCTA .";
             grid-column-gap: 15px;
         }
-    }
+    } 
 }
