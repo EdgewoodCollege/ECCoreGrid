@@ -12,8 +12,10 @@
         //Setting the default grid
         display: grid;
         grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
-        grid-template-rows: auto;
-        //grid-template-areas: "rowPdf rowPdf rowPdf rowPdf" "rowText rowText rowText rowText" "rowCTA rowCTA rowCTA rowCTA";
+        grid-template-rows: 3;
+        grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
+        "rowText rowText rowText rowText"
+        "rowCTA rowCTA rowCTA rowCTA";
         align-items: center;
 
         .rowText {
@@ -38,15 +40,15 @@
 //********* START layout alignment  *********//
 
 .row2ColPdf__grid--pdfLeft {
-    grid-template-rows: auto;
+    grid-template-rows: 3;
     grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
     "rowText rowText rowText rowText"
     "rowCTA rowCTA rowCTA rowCTA";
 }
 .row2ColPdf__grid--pdfRight {
-    grid-template-rows: auto;
-    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf" 
-    "rowText rowText rowText rowText" 
+    grid-template-rows: 3;
+    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
+    "rowText rowText rowText rowText"
     "rowCTA rowCTA rowCTA rowCTA";
 }
 

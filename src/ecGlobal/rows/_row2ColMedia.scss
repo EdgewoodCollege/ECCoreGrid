@@ -1,6 +1,4 @@
 /* _row2ColMedia.scss */
-/* Globally enable grid prefixes */
-/* autoprefixer grid: on */
 
 //********* START Core styling for this specific row *********//
 
@@ -30,6 +28,7 @@
             width:100%;
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             //without the min this doesn't show on mobile
             min-height: 400px;
 
@@ -50,8 +49,8 @@
     .rowContent {
         grid-template-rows: 2;
         grid-template-areas:
-            "rowMedia rowMedia rowMedia rowMedia"
-            "rowText rowText rowText rowText";
+        "rowText rowText rowText rowText"
+        "rowMedia rowMedia rowMedia rowMedia";
     }
 }
 .row2ColMedia__grid--mediaRight {
@@ -59,8 +58,8 @@
     .rowContent {
         grid-template-rows: 2;
         grid-template-areas:
-            "rowMedia rowMedia rowMedia rowMedia"
-            "rowText rowText rowText rowText";
+            "rowText rowText rowText rowText"
+			"rowMedia rowMedia rowMedia rowMedia";
     }
 }
 
