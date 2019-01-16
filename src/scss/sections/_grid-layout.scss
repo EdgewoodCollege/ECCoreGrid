@@ -80,6 +80,8 @@ main {
     grid-column:1/5;
     -ms-grid-column-span: 5;
     margin-top:-20px;
+    grid-row: 1;
+    -ms-grid-row: 1;
 }
 /************** END Hero Image **************/
 
@@ -107,7 +109,8 @@ main {
 /********** START Top Pane ******************/
 #gridTopPane {
     @include subGrid(1);
-    -ms-grid-row:1;
+    grid-row: 2;
+    -ms-grid-row:2;
 
     #dnn_TopPane {
         grid-row:1/2;
@@ -121,7 +124,9 @@ main {
 /****************** START FA Column Pane ******************/
 #gridFAColPane {
     @include subGrid(4);
-    -ms-grid-row:2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+
 
     #dnn_dFAColPane {
         grid-row:1/2;
@@ -147,7 +152,8 @@ main {
 /****************** START 3/9 Pane ******************/
 #grid3-9 {
     @include subGrid(2);
-    -ms-grid-row:3;
+    grid-row: 4;
+    -ms-grid-row:4;
 
     #dnn_LeftThreePane {
         grid-row:2/3; 
@@ -172,7 +178,9 @@ main {
 /****************** START 6/6 Pane ******************/
 #grid6-6 {
     @include subGrid(2);
-    -ms-grid-row:4;
+    grid-row: 5;
+
+    -ms-grid-row:5;
 
     #dnn_TopLeftPane {
         grid-row:1/2;
@@ -190,7 +198,9 @@ main {
 /****************** START 8/4 Pane ******************/
 #grid8-4 {
     @include subGrid(2);
-    -ms-grid-row:5;
+    grid-row: 6;
+
+    -ms-grid-row:6;
 
     #dnn_rpTop84Pane {
         grid-row:1/2;
@@ -209,6 +219,9 @@ main {
 #dnn_contentPane {
     grid-column: 2/4;
     -ms-grid-column: 2;
+    grid-row: 7;
+    -ms-grid-row: 7;
+
 }
 /************** END Content Pane **************/
 
@@ -217,7 +230,8 @@ main {
 /****************** START 4/8 Pane ******************/
 #grid4-8 {
     @include subGrid(2);
-    -ms-grid-row:6;
+    grid-row: 8;
+    -ms-grid-row:8;
 
     #dnn_rpbot84Pane {
         grid-row:1/2;
@@ -235,7 +249,8 @@ main {
 /****************** START 3/6/3 Pane ******************/
 #grid3-6-3 {
     @include subGrid(3);
-    -ms-grid-row:7;
+    grid-row: 9;
+    -ms-grid-row:9;
 
     #dnn_LeftPane {
         grid-row:1/2;
@@ -257,7 +272,8 @@ main {
 /****************** START 9/3 ******************/
 #grid9-3 {
     @include subGrid(2);
-    -ms-grid-row:8;
+    grid-row: 10;
+    -ms-grid-row:10;
 
     #dnn_LeftNinePane {
         grid-row:1/2;
@@ -275,7 +291,8 @@ main {
 /****************** START 3/3/3/3 ******************/
 #gridFAColPane2 {
     @include subGrid(4);
-    -ms-grid-row:9;
+    grid-row: 11;
+    -ms-grid-row:11;
 
     #dnn_FAColPane1 {
         grid-row:1/2;
@@ -301,7 +318,9 @@ main {
 /****************** START Middle Pane ******************/
 #gridMiddlePane {
     @include subGrid(1);
-    -ms-grid-row:10;
+    grid-row: 12;
+
+    -ms-grid-row:12;
 
     #dnn_MiddlePane {
         grid-column:1/2;
@@ -317,7 +336,8 @@ main {
 /****************** START 4/4/4 ******************/
 #gridTAColPane {
     @include subGrid(3);
-    -ms-grid-row:11;
+    grid-row: 13;
+    -ms-grid-row:13;
 
     #dnn_TAColPane {
         grid-row:1/2;
@@ -339,7 +359,8 @@ main {
 /****************** START Bottom Pane ******************/
 #gridBottomPane {
     @include subGrid(1);
-    -ms-grid-row:12;
+    grid-row: 14;
+    -ms-grid-row:14;
 
     #dnn_BottomPane {
         grid-column:1/2;
@@ -355,7 +376,8 @@ main {
 /****************** START Admin Pane ******************/
 #gridAdminPane {
     @include subGrid(1);
-    -ms-grid-row:13;
+    grid-row: 15;
+    -ms-grid-row:15;
 
     #dnn_AdminPane {
         grid-column:1/2;
@@ -370,7 +392,8 @@ main {
 
 /************** START Second Footer **************/
 #dnn_secondFooter {
-    -ms-grid-row:14; 
+    grid-row: 16;
+    -ms-grid-row:16; 
     grid-column:1/5;
     -ms-grid-column-span: 5;
 }
