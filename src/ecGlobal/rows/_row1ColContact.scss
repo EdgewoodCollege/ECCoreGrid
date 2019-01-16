@@ -1,0 +1,119 @@
+/* _row2ColContact.scss */
+/* Globally enable grid prefixes */
+/* autoprefixer grid: on */
+
+//********* START Core styling for this specific row *********//
+
+.row1ColContact {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+
+  .rowContent {
+    //Setting the default grid
+    display: grid;
+    grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "rowMedia rowMedia rowMedia rowMedia"
+      "rowText rowText rowText rowText";
+    align-items: center;
+
+    .rowText {
+      grid-area: rowText;
+      padding: 3rem 8rem 3rem 1.5rem;
+      .rowSubtitle {
+        padding: 0 0 20px;
+        font-size: 1.4rem;
+        margin: auto;
+      }
+    }
+    .rowMedia {
+      grid-area: rowMedia;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      //without the min this doesn't show on mobile
+      min-height: 256px;
+      position: relative;
+      display: grid;
+      align-items: end;
+      //justify-items: center;
+      .rowImage {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+        }
+        img {
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          left: 20px;
+          position: absolute;
+          border: 2px solid #000;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+    }
+  }
+}
+
+//********* END Core styling for this specific row *********//
+
+//********* START layout alignment  *********//
+
+.row1ColContact__align--left {
+  .rowContent {
+    grid-template-rows: 2;
+    grid-template-areas:
+      "rowMedia rowMedia rowMedia rowMedia"
+      "rowText rowText rowText rowText";
+  }
+}
+.row1ColContact__align--right {
+  .rowContent {
+    grid-template-rows: 2;
+    grid-template-areas:
+      "rowMedia rowMedia rowMedia rowMedia"
+      "rowText rowText rowText rowText";
+  }
+}
+
+//********* END layout alignment  *********//
+
+//********* START Style modfiers to change row variables *********//
+
+@each $row in $rowColors {
+  $names: nth($row, 1);
+  $bgColor: nth($row, 2);
+  $txtColor: nth($row, 3);
+
+  .row1ColContact__style--#{$names} {
+    background-color: $bgColor;
+    color: $txtColor;
+
+    a {
+      color: $txtColor;
+    }
+    .rowContent {
+      .rowMedia {
+        .rowImage {
+          &:before {
+            background: linear-gradient(90deg, rgba($bgColor, 1) 0%, rgba($bgColor, .8) 20% );
+          }
+        }
+      }   
+    }
+  }
+}
+
+//********* END Style modfiers to change row variables *********//
+

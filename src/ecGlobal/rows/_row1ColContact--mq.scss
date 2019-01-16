@@ -1,0 +1,45 @@
+/* _row1ColContact--mq.scss */
+/* autoprefixer grid: on */
+
+@media only screen and (min-width: 768px) {
+    //default sizing for row
+    .row1ColContact {
+      .rowContent {
+        grid-template-rows: 1;
+        grid-template-columns: 0vw minmax(auto, 35vw) minmax(auto, 55vw) 10vw;
+        grid-column-gap: 0;
+        grid-template-areas: ". rowMedia rowText .";
+        .rowText {
+          .rowSubtitle {
+          }
+        }
+        .rowMedia {
+          align-items: center;
+          .rowImage {
+            &:before {
+            }
+            img {
+              left:-25px;
+            }
+          }
+        }
+      }
+    }
+  
+    .row1ColContact__align--left {
+      .rowContent {
+        grid-template-rows: 1;
+        grid-template-columns: 0vw minmax(auto, 35vw) minmax(auto, 55vw) 10vw;
+        grid-template-areas: ". rowMedia rowText .";
+        grid-column-gap: 0;
+      }
+    }
+    .row1ColContact__align--right {
+      .rowContent {
+        grid-template-rows: 1;
+        grid-template-columns: 10vw minmax(auto, 55vw) minmax(auto, 35vw) 0;
+        grid-template-areas: ". rowText rowMedia .";
+        grid-column-gap: 0;
+      }
+    }
+  }

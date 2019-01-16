@@ -1,4 +1,5 @@
 /* CSS Document */
+/* Globally enable grid prefixes */
 /* autoprefixer grid: on */
 
 //Keeping the common classes for rows only here
@@ -13,15 +14,18 @@
 @import 'reveal4up2';
 @import 'reveal4upGrid';
 @import 'row1ColOverlay';
-@import 'row1ColText';
 @import 'row2ColMedia';
 @import 'row2ColPdf';
 @import 'rowReveal4Up';
 @import 'row1ColTitle';
+@import 'row1ColContact';
 @import 'titleRow';
 
 @import 'rowInfographic';
 @import 'rowCheckerboard';
 
+// load utilites after rows
+@import '_utilities/utilities--end';
 
+// load media queries for rows
 @import 'media-queries';
