@@ -6,10 +6,6 @@
   <!-- Main Content -->
   <main role="main">
     <div id="heroImage" runat="server"></div>
-    <!-- <div class="container-fluid">
-      <div id="TopPaneFluid" class="col-md-12" runat="server"></div>
-    </div> -->
-
     <div id="gridTopPane">
       <div id="TopPane" runat="server"></div>
     </div>
@@ -81,8 +77,6 @@
   
     <div id="secondFooter" runat="server"></div>
   </main>
-
-  <!-- The page -->
 
   <!-- Footer -->
   <!--#include file="partials/_footer.ascx" -->
