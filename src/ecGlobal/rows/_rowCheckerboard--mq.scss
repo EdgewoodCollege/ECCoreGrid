@@ -1,0 +1,40 @@
+/* _rowCheckerboard--mq.scss */
+
+@media only screen and (min-width: $md) {
+	//Default layout for row
+	.rowCheckerboard {
+
+		.checkerboardPair {
+			grid-template-columns:1fr 1fr;
+			grid-template-rows:1fr;
+			grid-template-areas:
+				"mediaContent rowContent";
+			
+		}
+	}
+
+	.rowCheckerboard__grid--mediaLeft {
+		
+		.checkerboardPair {
+			grid-template-areas:
+				"mediaContent rowContent";
+			
+			&:nth-child(even) {
+				grid-template-areas:
+					"rowContent mediaContent";
+			}
+		}
+	}
+	.rowCheckerboard__grid--mediaRight {
+		
+		.checkerboardPair {
+			grid-template-areas:
+				"rowContent mediaContent";
+			
+			&:nth-child(even) {
+				grid-template-areas:
+					"mediaContent rowContent";
+			}
+		}
+	}
+}

@@ -1,19 +1,9 @@
 /* _row2ColMedia--mq.scss */
-/* autoprefixer grid: on */
 
 @media only screen and (min-width:$md) {
-    //default sizing for row
-    .row2ColMedia {
+    //Default layout for row
 
-        .rowContent {
-            // grid-template-columns: 0 minmax(auto, 35vw) minmax(auto, 55vw) 10vw;
-            // grid-column-gap: 0;
-            // grid-template-areas: '. rowMedia rowText .';
-            // grid-template-rows: 1;
-
-        }
-    }
-    .row2ColMedia__align--left {
+    .row2ColMedia__grid--mediaLeft {
         .rowContent {
             grid-template-columns: 0 minmax(auto, 35vw) minmax(auto, 55vw) 10vw;
             grid-template-areas: '. rowMedia rowText .';
@@ -21,7 +11,7 @@
             grid-template-rows: 1;
         }
     }
-    .row2ColMedia__align--right {
+    .row2ColMedia__grid--mediaRight {
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 55vw) minmax(auto, 35vw) 0;
             grid-template-areas: '. rowText rowMedia .';
@@ -30,5 +20,3 @@
         }
     }
 }
-
-

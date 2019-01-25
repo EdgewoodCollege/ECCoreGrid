@@ -1,11 +1,10 @@
-//_row1ColOverlay--mq.scss
+/* _row1ColOverlay--mq.scss */
 
-@media only screen and (min-width:768px) {
-    //default sizing for row
+@media only screen and (min-width:$md) {
+    //Default layout for row
     .row1ColOverlay {
-        grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+        grid-template-columns: 10vw minmax(auto, 80vw) 10vw;
         grid-column-gap: 15px;
-        grid-template-areas: ". content .";
+        grid-template-areas: ". rowContent .";
     }
-
 }

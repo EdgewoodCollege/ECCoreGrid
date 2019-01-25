@@ -20,11 +20,12 @@
 @import 'row1ColContact--mq';
 @import 'titleRow--mq';
 @import 'rowInfographic--mq.scss';
+@import 'rowCheckerboard--mq';
+
 
 
 
 //Below is the template for Media Query breakpoints. These are based off Bootstrap 4
-
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: $sm) { }

@@ -6,28 +6,47 @@
 
 	.checkerboardPair {
 		display:grid;
-		grid-template-columns:1fr 1fr;
+		grid-template-columns:1fr;
+		grid-template-rows:450px auto;
 		grid-template-areas:
-			"mediaContent rowContent";
+			"mediaContent"
+			"rowContent";
 			
 		.rowMedia {
 			background-position: center top;
 			background-size: cover;
-			height: 450px;
 			overflow: hidden;
 			padding: 0;
-			grid-area:"mediaContent";
+			grid-area: mediaContent;
+			display:grid;
+			height: 450px;
 
 			.play-button {
 				color:$white;
+				place-self:center;
+				font-size:4em;
+
+				&:hover {
+					color:$primary-color;
+				}
 			}
 		}
 		.rowContent {
-			padding:0px 75px;
-			grid-area:"rowContent";
+			padding:30px 75px 20px 75px;
+			place-self:center;
+			grid-area:rowContent;
 
+			.rowTitle {
+				font-size:1.75em;
+				font-weight:700;
+
+				&:after {
+					display:block;
+					margin:2px 0px 10px 0px;
+				}
+			}
 			.rowText {
-				font-size:2em;
+				font-size:1.25em;
 			}
 		}
 	}
@@ -41,11 +60,13 @@
 	
 	.checkerboardPair {
 		grid-template-areas:
-			"mediaContent rowContent";
+			"mediaContent"
+			"rowContent";
 		
 		&:nth-child(even) {
 			grid-template-areas:
-				"rowContent mediaContent";
+				"mediaContent"
+				"rowContent";
 		}
 	}
 }
@@ -53,11 +74,13 @@
 	
 	.checkerboardPair {
 		grid-template-areas:
-			"rowContent mediaContent";
+			"mediaContent"
+			"rowContent";
 		
 		&:nth-child(even) {
 			grid-template-areas:
-				"mediaContent rowContent";
+				"mediaContent"
+				"rowContent";
 		}
 	}
 }
