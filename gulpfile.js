@@ -75,33 +75,42 @@ gulp.task('scss', function() {
 *	JAVASCRIPT TASKS
 ------------------------------------------------------*/
 
+// gulp.task('copyJs', function() {
+
+//   return gulp.src('node_modules/iframe-resizer/src/iframeResizer.js')
+//   .pipe(gulp.dest('src/js/')); 
+
+// });
+
+
 // Development JS creation.
 // Checks for errors and concats. Minifies.
 gulp.task('js', function() {
 
+
   return gulp.src( [ './'+src+'js/*.js'] )
-    .pipe(jshint())
+    //.pipe(jshint())
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest( './'+dist+'js/'))
-    .pipe(jshint.reporter('fail'))
+    //.pipe(jshint.reporter('fail'))
     .pipe(notify(function (file) {
-      if (file.jshint.success) {
-        return { message : 'JS much excellent success!',
-          title : file.relative,
-          sound: false,
-        };
-      }
-      var errors = file.jshint.results.map(function (data) {
-        if (data.error) {
-          return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
-        }
-      }).join("\n");
-      return { message : file.relative + " (" + file.jshint.results.length + " errors)\n" + errors,
-        sound: false,
-        emitError : true,
-        title : 'JSLint'
-      };
+      // if (file.jshint.success) {
+      //   return { message : 'JS much excellent success!',
+      //     title : file.relative,
+      //     sound: false,
+      //   };
+      // }
+      // var errors = file.jshint.results.map(function (data) {
+      //   if (data.error) {
+      //     return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+      //   }
+      // }).join("\n");
+      // return { message : file.relative + " (" + file.jshint.results.length + " errors)\n" + errors,
+      //   sound: false,
+      //   emitError : true,
+      //   title : 'JSLint'
+      // };
     }))
 });
 
@@ -130,7 +139,7 @@ gulp.task('copyfiles', function() {
   // This copies the normalize css file over to the scss components folder.
 	// This will overwrite any changes you've made to normalize.css.
 	//gulp.src( './'+node+'/normalize.css/normalize.css').pipe(rename('_normalize.scss')).pipe(gulp.dest( './'+src+'scss/components/'));
-
+  gulp.src('node_modules/iframe-resizer/src/iframeResizer.js').pipe(gulp.dest('src/js/')); 
 
   //Copy over the accordion 
   // gulp.src('./'+node+'/accordion/src/accordion.js')

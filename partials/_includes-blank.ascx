@@ -8,4 +8,4 @@
 <dnn:DnnJsInclude runat="server" FilePath="dist/js/customTop.min.js" ForceProvider="DnnPageHeaderProvider" Priority="120" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="dist/js/accordion.js" ForceProvider="DnnPageHeaderProvider" Priority="130" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="dist/js/customBottom.min.js" ForceProvider="DnnPageHeaderProvider" Priority="140" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.15/iframeResizer.contentWindow.min.js" ForceProvider="DnnPageHeaderProvider" Priority="150" />
+<dnn:DnnJsInclude runat="server" FilePath="dist/js/iFrameResizer.min.js" ForceProvider="DnnPageHeaderProvider" Priority="150" />
