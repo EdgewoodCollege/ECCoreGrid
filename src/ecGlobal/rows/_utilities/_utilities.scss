@@ -53,7 +53,7 @@ $row-button-colors: ('red'#8f1324 #fff) ('black'#000 #fff) ('grey'#ccc #000) ('w
     $bgColor: nth($button, 2);
     $txtColor: nth($button, 3);
 
-    .rowButton__color--#{$names} {
+    a.rowButton__color--#{$names}, .rowButton__color--#{$names} {
         color: $txtColor;
         background: linear-gradient(to bottom, lighten( $bgColor, 5% ) 5%, darken( $bgColor, 5% ) 100%);
         background-color: $bgColor;

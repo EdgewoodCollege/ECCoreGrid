@@ -24,8 +24,5 @@
 @import 'rowInfographic';
 @import 'rowCheckerboard';
 
-// load utilites after rows
-@import '_utilities/utilities--end';
-
 // load media queries for rows
 @import 'media-queries';
