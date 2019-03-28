@@ -68,12 +68,9 @@
     .row1ColTitle__style--#{$names} {
         background-color: $bgColor;
         color: $txtColor;
-
-        a {
-            color: $txtColor;
-        }
-
+        
         .rowContent {
+            
             h1 {
                 color: $txtColor;
             }
