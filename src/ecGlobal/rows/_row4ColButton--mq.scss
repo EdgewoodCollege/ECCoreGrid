@@ -1,0 +1,80 @@
+/* _row4ColButton--mq.scss */
+
+
+
+
+@media only screen and (min-width:$sm) {
+    .row4ColButton {
+        transition: $profileTransition;
+        grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+        grid-template-areas: ". rowContent .";
+        display: grid;
+        .rowContent {
+            grid-template-columns: 50% 50%;
+            a {
+                &:nth-child(1) {
+                    grid-row: 1;
+                    grid-column: 1;
+                    @include gridAlign();
+
+                }
+                &:nth-child(2) {
+                    grid-row: 1;
+                    grid-column: 2;
+                    @include gridAlign();
+
+                }
+                &:nth-child(3) {
+                    grid-row: 2;
+                    grid-column: 1;
+                    @include gridAlign();
+
+                }
+                &:nth-child(4) {
+                    grid-row: 2;
+                    grid-column: 2;
+                    @include gridAlign();
+
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (min-width:$lg) {
+    .row4ColButton {
+        .rowContent {
+            grid-template-columns: 25% 25% 25% 25%;
+            a {
+                &:nth-child(1) {
+                    grid-row: 1;
+                    grid-column: 1;
+                    @include gridAlign();
+
+                }
+                &:nth-child(2) {
+                    grid-row: 1;
+                    grid-column: 2;
+                    @include gridAlign();
+
+                }
+                &:nth-child(3) {
+                    grid-row: 1;
+                    grid-column: 3;
+                    @include gridAlign();
+
+                }
+                &:nth-child(4) {
+                    grid-row: 1;
+                    grid-column: 4;
+                    @include gridAlign();
+
+                }
+            }
+        }
+    }
+}
+
+
+//********* END Core styling for this specific row *********//
+
