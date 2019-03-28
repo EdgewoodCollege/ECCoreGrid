@@ -3,29 +3,57 @@
 @media only screen and (min-width: $md) {
     //Default layout for row
     .row2ColPdf {
+
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
-            grid-template-rows: 2;
+            //grid-template-rows: 1fr 1fr;
             grid-column-gap: 15px;
             grid-template-areas: ". rowText rowPdf ." ". rowCTA rowCTA .";
+
+            .rowText {
+                grid-row:1;
+                grid-column:2;
+            }
+            .rowMedia {
+                grid-row:1;
+                grid-column:3;
+            }
         }
     }
     .row2ColPdf__grid--pdfLeft {
 
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
-            grid-template-rows: 2;
+            //grid-template-rows: 1fr 1fr;
             grid-template-areas: ". rowPdf rowText ." ". rowCTA rowCTA .";
             grid-column-gap: 15px;
+
+            .rowText {
+                grid-row:1;
+                grid-column:3;
+            }
+            .rowMedia {
+                grid-row:1;
+                grid-column:2;
+            }
         }
     }
     .row2ColPdf__grid--pdfRight {
         
         .rowContent {
             grid-template-columns: 10vw minmax(auto, 65vw) minmax(auto, 15vw) 10vw;
-            grid-template-rows: 2;
+            //grid-template-rows: 1fr 1fr;
             grid-template-areas: ". rowText rowPdf ." ". rowCTA rowCTA .";
             grid-column-gap: 15px;
+
+            .rowText {
+                grid-row:1;
+                grid-column:2;
+            }
+            .rowMedia {
+                grid-row:1;
+                grid-column:3;
+            }
         }
     } 
 }

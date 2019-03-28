@@ -13,9 +13,10 @@
         display: grid;
         grid-template-columns: 10vw minmax(auto, 15vw) minmax(auto, 65vw) 10vw;
         grid-template-rows: 3;
-        grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
-        "rowText rowText rowText rowText"
-        "rowCTA rowCTA rowCTA rowCTA";
+        grid-template-areas:
+            "rowPdf rowPdf rowPdf rowPdf"
+            "rowText rowText rowText rowText"
+            "rowCTA rowCTA rowCTA rowCTA";
         align-items: center;
 
         .rowText {
@@ -24,6 +25,7 @@
 
         .rowPdf {
             grid-area: rowPdf;
+
             img {
                 width: 100%;
                 max-width: 200px;
@@ -41,15 +43,17 @@
 
 .row2ColPdf__grid--pdfLeft {
     grid-template-rows: 3;
-    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
-    "rowText rowText rowText rowText"
-    "rowCTA rowCTA rowCTA rowCTA";
+    grid-template-areas:
+        "rowPdf rowPdf rowPdf rowPdf"
+        "rowText rowText rowText rowText"
+        "rowCTA rowCTA rowCTA rowCTA";
 }
 .row2ColPdf__grid--pdfRight {
     grid-template-rows: 3;
-    grid-template-areas: "rowPdf rowPdf rowPdf rowPdf"
-    "rowText rowText rowText rowText"
-    "rowCTA rowCTA rowCTA rowCTA";
+    grid-template-areas:
+        "rowPdf rowPdf rowPdf rowPdf"
+        "rowText rowText rowText rowText"
+        "rowCTA rowCTA rowCTA rowCTA";
 }
 
 //********* END layout alignment  *********//
@@ -64,10 +68,6 @@
     .row2ColPdf__style--#{$names} {
         background-color: $bgColor;
         color: $txtColor;
-        a {
-            color: $txtColor;
-
-        }
     }
 }
 
