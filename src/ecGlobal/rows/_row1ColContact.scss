@@ -57,7 +57,7 @@
           width: 150px;
           border-radius: 50%;
           left: 20px;
-          position: absolute;
+          position: relative;
           border: 2px solid #000;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -91,18 +91,27 @@
 
 //********* START Style modfiers to change row variables *********//
 
-@each $row in $rowColors {
+@each $row in $rowColorsLinks {
   $names: nth($row, 1);
   $bgColor: nth($row, 2);
   $txtColor: nth($row, 3);
+  $linkColor: nth($row, 4);
+  $secLinkColor: nth($row, 5);
 
   .row1ColContact__style--#{$names} {
     background-color: $bgColor;
     color: $txtColor;
+a, a:visited{
+  color:$linkColor;
+  &:hover {
+color:$secLinkColor;
+  }
+}
 
     .rowContent {
       .rowMedia {
         .rowImage {
+
           &:before {
             background: linear-gradient(90deg, rgba($bgColor, 1) 0%, rgba($bgColor, .8) 20% );
           }
