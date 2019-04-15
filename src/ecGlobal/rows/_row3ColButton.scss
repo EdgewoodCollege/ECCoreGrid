@@ -1,4 +1,4 @@
-/* _row4ColButton.scss */
+/* _row3ColButton.scss */
 
 
 @mixin gridAlign() {
@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
 }
-.row4ColButton {
+.row3ColButton {
     background-color: #8f1324;
     display: grid;
     justify-content: center;
@@ -51,17 +51,10 @@
             &:nth-child(3) {
                 grid-row: 3;
                 grid-column: 1;
-                @include gridAlign();
-
-            }
-            &:nth-child(4) {
-                grid-row: 4;
-                grid-column: 1;
                 margin-bottom:2rem;
                 @include gridAlign();
 
             }
-        
         }
 
     }
@@ -79,7 +72,7 @@
     $bgColor: nth($row, 2);
     $txtColor: nth($row, 3);
 
-    .row4ColButton__style--#{$names} {
+    .row3ColButton__style--#{$names} {
         background-color: $bgColor;
         .rowContent {
             a {
