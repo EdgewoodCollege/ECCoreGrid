@@ -1,7 +1,7 @@
 /* components.scss */
 
-@import 'footerSec';
 @import 'secondaryNav';
+@import 'rowFooterSecondary';
 
 
 
@@ -10,7 +10,8 @@
 
 
 // Media Query Imports here
-@import 'footerSec--mq';
 
 @import 'secondaryNav--mq';
+
+@import 'rowFooterSecondary--mq';
 //@import 'intuitionCalculator--mq';    NOT NEEDED
