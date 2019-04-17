@@ -71,16 +71,19 @@
         background-color: $bgColor;
         color: $txtColor;
         
-        a, a:visited{
-            color:$linkColor;
-            &:hover {
-          color:$secLinkColor;
-            }
-          }
+
         .rowContent {
             
             h1 {
                 color: $txtColor;
+            }
+            .rowText{
+                a, a:visited{
+                    color:$linkColor;
+                    &:hover {
+                  color:$secLinkColor;
+                    }
+                  }
             }
         }
     }
