@@ -67,18 +67,23 @@
 
 //********* START Style modfiers to change row variables *********//
 
-@each $row in $rowColors {
+@each $row in $rowColorsLinks {
     $names: nth($row, 1);
     $bgColor: nth($row, 2);
     $txtColor: nth($row, 3);
+    $linkColor: nth($row, 4);
+    $secLinkColor: nth($row, 5);
 
     .row2ColMedia__style--#{$names} {
         background-color: $bgColor;
         color: $txtColor;
 
-        a {
-            color: $txtColor;
-        }
+        a, a:visited{
+            color:$linkColor;
+            &:hover {
+          color:$secLinkColor;
+            }
+          }
     }
 }
 
