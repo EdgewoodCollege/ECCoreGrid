@@ -1,8 +1,8 @@
 $rowColors: ('red' $red #fff) ('black' #000 #fff) ('grey' $grey #000) ('white' #fff #000);
 //*added new array so we can manage links at same time as row style colors
-//  (1, 2, 3, 4)  1= Row/style name, 2= background color, 3= text color, 4=link color
+//  (1, 2, 3, 4)  1= Row/style name, 2= background color, 3= text color, 4=link color, 5=link color hover
+$rowColorsLinks: ('red' $red #fff #fff #000) ('black' #000 #fff #fff $red) ('grey' $grey #000 $red #000) ('white' #fff #000 $red #000);
 
-$rowColorsLinks: ('red' $red #fff #000 #fff) ('black' #000 #fff #fff $red) ('grey' $grey #000 $red #000) ('white' #fff #000 $red #000);
 .rowContent {
     
     a {
@@ -50,12 +50,14 @@ $rowColorsLinks: ('red' $red #fff #000 #fff) ('black' #000 #fff #fff $red) ('gre
     display: inline-block;
 }
 
-$row-button-colors: ('red'#8f1324 #fff) ('black'#000 #fff) ('grey'#ccc #000) ('white'#fff #000) ('orange' $orange #fff) ('blue' $blue #fff) ('green' $green #fff);
+$row-button-colors: ('red' $red #fff #fff #000) ('black' #000 #fff #fff $red) ('grey' $grey #000 $red #000) ('white' #fff #000 $red #000) ('orange' $orange #fff #fff #000) ('blue' $blue #fff #fff #000) ('green' $green #fff #fff #000);
 
 @each $button in $row-button-colors {
     $names: nth($button, 1);
     $bgColor: nth($button, 2);
     $txtColor: nth($button, 3);
+    $linkColor: nth($button, 4);
+    $secLinkColor: nth($button, 5);
 
     a.rowButton__color--#{$names}, .rowButton__color--#{$names} {
         color: $txtColor;
@@ -64,11 +66,12 @@ $row-button-colors: ('red'#8f1324 #fff) ('black'#000 #fff) ('grey'#ccc #000) ('w
         transition: transform 0.3s ease-in;
 
         a {
-            color: $txtColor;
+            color: $linkColor;
         }
         &:hover {
             background: linear-gradient(to bottom, darken( $bgColor, 5% ) 5%, lighten( $bgColor, 5% ) 100%);
             transition: transform 0.3s ease-in;
+            color: $secLinkColor;
         }
     }
 }
