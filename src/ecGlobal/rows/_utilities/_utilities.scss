@@ -51,27 +51,5 @@ $rowColorsLinks: ('red' $red #fff #fff #000) ('black' #000 #fff #fff $red) ('gre
     display: inline-block;
 }
 
-$row-button-colors: ('red'#8f1324 #fff) ('black'#000 #fff) ('grey'#ccc #000) ('white'#fff #000) ('orange' $orange #fff) ('blue' $blue #fff) ('green' $green #fff);
 
-@each $button in $row-button-colors {
-    $names: nth($button, 1);
-    $bgColor: nth($button, 2);
-    $txtColor: nth($button, 3);
-
-    a.rowButton__color--#{$names}, .rowButton__color--#{$names} {
-        color: $txtColor;
-        background: linear-gradient(to bottom, lighten( $bgColor, 5% ) 5%, darken( $bgColor, 5% ) 100%);
-        background-color: $bgColor;
-        transition: transform 0.3s ease-in;
-
-        a {
-            color: $txtColor;
-        }
-        &:hover {
-            background: linear-gradient(to bottom, darken( $bgColor, 5% ) 5%, lighten( $bgColor, 5% ) 100%);
-            transition: transform 0.3s ease-in;
-        }
-    }
-}
-
-// **********************  END rowButton colors *************************************//
+// **********************  END rowButton colors *************************************/

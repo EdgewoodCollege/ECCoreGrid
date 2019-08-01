@@ -1,0 +1,29 @@
+/* _utilities--mq.scss */
+$row-button-colors: ('red' $red #fff #fff #000) ('black' #000 #fff #fff $red) ('grey' $grey #000 $red #000) ('white' #fff #000 $red #000) ('orange' $orange #fff #fff #000) ('blue' $blue #fff #fff #000) ('green' $green #fff #fff #000);
+
+@each $button in $row-button-colors {
+    $names: nth($button, 1);
+    $bgColor: nth($button, 2);
+    $txtColor: nth($button, 3);
+    $buttonLinkColor: nth($button, 4);
+    $buttonSecLinkColor: nth($button, 5);
+
+    a.rowButton__color--#{$names}, .rowButton__color--#{$names} {
+        color: $txtColor !important;
+        background: linear-gradient(to bottom, lighten( $bgColor, 5% ) 5%, darken( $bgColor, 5% ) 100%);
+        background-color: $bgColor;
+        transition: transform 0.3s ease-in;
+
+        a, a:visited{
+            color: $buttonLinkColor;
+            &:hover {
+                background: linear-gradient(to bottom, darken( $bgColor, 5% ) 5%, lighten( $bgColor, 5% ) 100%);
+                transition: transform 0.3s ease-in;
+                color: $buttonSecLinkColor;
+            }
+        }
+        
+    }
+}
+
+// **********************  END rowButton colors *************************************//
