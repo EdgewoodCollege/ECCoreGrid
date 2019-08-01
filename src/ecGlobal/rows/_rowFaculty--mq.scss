@@ -1,0 +1,88 @@
+/* _rowTools--mq.scss */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) {
+    #rowFaculty {
+      & > * {
+      }
+      & > .full {
+      }
+      .hs {
+        grid-auto-columns: calc(50% - var(--gutter) * 2);
+  
+        &.hs:before,
+        .hs:after {
+        }
+        /* START Card */
+        .card {
+          & > .img {
+          }
+  
+          .text {
+            h2 {
+              &.cardTitle {
+              }
+            }
+            p {
+            }
+            a {
+              &:hover {
+              }
+            }
+          }
+        }
+        /* END Card */
+      }
+    }
+  }
+@media (min-width: $md) {
+
+  #rowFaculty {
+    grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+    grid-column-gap: 15px;
+    grid-template-areas: ". rowContent .";
+    &> .rowContent {
+        grid-area: rowContent;
+    }
+}
+}
+    
+
+
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: $lg) {
+    #rowFaculty {
+      & > * {
+      }
+      & > .full {
+      }
+      .hs {
+        grid-auto-columns: calc(25% - var(--gutter) * 2);
+  
+        &.hs:before,
+        .hs:after {
+        }
+        /* START Card */
+        .card {
+          & > .img {
+          }
+  
+          .text {
+            h2 {
+              &.cardTitle {
+              }
+            }
+            p {
+            }
+            a {
+              &:hover {
+              }
+            }
+          }
+        }
+        /* END Card */
+      }
+    }
+  }
+  

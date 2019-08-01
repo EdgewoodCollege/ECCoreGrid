@@ -1,0 +1,111 @@
+/* _rowFaculty.scss */
+
+
+:root {
+    --gutter: 20px;
+  }
+  
+  #rowFaculty {
+    overflow-y: hidden;
+    padding: var(--gutter) var(--gutter) var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    // grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "rowcontent";
+    margin: 4rem 0;
+    &> .rowContent {
+        grid-area:rowContent;
+        width:80vw;
+      }
+    & > * {
+      grid-column: 2 / -2;
+    }
+    & > .full {
+      grid-column: 1 / -1;
+    }
+    .hs {
+      display: grid;
+      grid-gap: calc(var(--gutter) / 2);
+      grid-template-columns: 10px;
+      grid-template-rows: minmax(300px, 1fr);
+      grid-auto-flow: column;
+      grid-auto-columns: calc(100% - var(--gutter) * 2);
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      padding-bottom: calc(0.75 * var(--gutter));
+      margin-bottom: calc(-0.25 * var(--gutter));
+      &.hs:before,
+      .hs:after {
+        content: "";
+        width: 10px;
+      }
+      /* START Card */
+      .card {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        height: 350px;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                background-color:#8f1324;
+        color:#fff;
+  
+        & > .img {
+          height: 60%;
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+        }
+  
+        .text {
+          width: 100%;
+          height: 40%;
+          overflow: hidden;
+          padding: calc(var(--gutter) / 2 * 1.5);
+          margin-bottom: calc(var(--gutter) * 2);
+  
+          h2 {
+            color: rgba(#fff, 0.85);
+            letter-spacing: 0.0225em;
+            margin: 0 0 0 0;
+            width: 100%;
+            &.cardTitle {
+              width:100%;
+            }
+          }
+          p {
+            line-height: 1.25;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 12px;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-weight:bold;
+            &:hover {
+              border-bottom: 2px dotted #fff;
+            }
+          }
+        }
+      }
+      /* END Card */
+    }
+  }
+  
+  .hs > li, .card {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  
+  

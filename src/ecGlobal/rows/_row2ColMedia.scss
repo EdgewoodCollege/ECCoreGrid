@@ -30,11 +30,12 @@
             background-repeat: no-repeat;
             background-position: center;
             //without the min this doesn't show on mobile
-            min-height: 400px;
+            min-height: 350px;
 
             iframe {
                 height: 100%;
                 width: 100%;
+                max-height: 350px;
             }
         }
     }

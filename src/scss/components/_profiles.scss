@@ -23,7 +23,7 @@
                 font-family: $open-sans;
 
                 h2 {
-                    font-size: 1rem;
+                    font-size: 2rem;
                     font-weight: 500;
                     margin: 0;
                     color: black;
@@ -48,6 +48,7 @@
                     background-color: $dark_red;
                     padding: 0.5rem 0.3rem;
                     font-size: 0.7rem;
+                    border-radius: .4rem;
                 }
             }
         }
@@ -387,6 +388,7 @@
         }
 
         &.row {
+            margin: 4rem 2rem;
             .item-list {
                 .item {
                     border: none;
@@ -824,7 +826,7 @@
         }
 
         &.listing {
-            margin: 2rem;
+            margin: 4rem 2rem;
 
             &.filterable {
                 .header {

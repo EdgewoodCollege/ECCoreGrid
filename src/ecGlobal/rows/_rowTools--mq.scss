@@ -1,0 +1,11 @@
+/* _rowTools--mq.scss */
+
+@media only screen and (min-width:$md) {
+    //Default layout for row
+    .rowTools {
+        grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+        grid-column-gap: 15px;
+        grid-template-areas:
+            ". rowContent .";
+    }
+ } 

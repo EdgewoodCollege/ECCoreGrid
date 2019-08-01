@@ -1,0 +1,84 @@
+/* _ecVueSliders--mq.scss */ 
+
+@media (min-width: $md) {
+
+   
+
+
+#ecVueSlider {
+    .sliders {
+        .container {
+            max-width: 80vw;
+        }
+        &__controls {
+            
+            button {
+              
+            }
+        }
+
+        &__control {
+         
+            &:hover,
+            &:focus {}
+        }
+
+        &__header {
+           
+        }
+
+        &__container {
+            h3 {
+            }
+        }
+
+        &__title {
+            font-size: 1.75rem;
+           
+            &::after {
+           
+            }
+        }
+
+        &__button {
+        
+            &::before {
+    
+            }
+            &:hover {
+                &::before {
+                }
+            }
+            &:focus {
+                &::before {
+                }
+            }
+            &:active,
+            &--active {
+                &::before {
+                }
+                .sliders__icon {
+                }
+            }
+        }
+
+        &__icon {
+  
+        }
+
+        &__content {
+   
+
+            &--expanded {
+       
+            }
+        }
+    }
+
+    .rich-text {
+   
+        p {
+        }
+    }
+}
+}

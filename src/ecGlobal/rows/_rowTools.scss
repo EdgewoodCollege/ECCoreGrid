@@ -1,0 +1,140 @@
+/* _rowTools.scss */
+
+
+$btn-border-radius: 0.25rem !default;
+$btn-border-style: 1px solid #d3d3d3;
+$btn-padding: 0.3rem 0.6rem;
+$btn-transistion: background-color .5s ease-out, color .5s ease-out;
+
+.rowTools {
+    background-color: #fff;
+    border-top: solid 1px #d3d3d3;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 0;
+    //Setting the default grid
+    grid-template-columns: 0vw minmax(auto, 100vw) 0vw;
+    grid-template-rows: auto;
+    z-index: 0;
+    grid-template-areas:
+        ". rowContent .";
+
+    > .rowContent {
+        grid-area: rowContent;
+        z-index: 1;
+        padding: 0 1.5rem;
+
+    }
+    h3 {
+        font-weight: normal;
+    }
+
+    a {
+        color: #333;
+        float: left;
+        text-wrap: not-allowed;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin:0 0 1rem 0;
+        &:hover .rowTools__icon,
+        &:hover .rowTools__label {
+            background-color: #8f1324;
+            color: #fff;
+            transition: $btn-transistion;
+        }
+
+    }
+    .rowTools__icon {
+        background-color: #ccc;
+        float: left;
+        border-top-left-radius: $btn-border-radius;
+        border-bottom-left-radius: $btn-border-radius;
+        padding: $btn-padding;
+        width: auto;
+        border-left: $btn-border-style;
+        border-top: $btn-border-style;
+        border-bottom: $btn-border-style;
+        transition: $btn-transistion;
+
+    }
+    .rowTools__label {
+        text-wrap: nowrap;
+        border-top-right-radius: $btn-border-radius;
+        border-bottom-right-radius: $btn-border-radius;
+        width: auto;
+        margin: 0 1rem 0 0;
+        border-right: $btn-border-style;
+        border-top: $btn-border-style;
+        border-bottom: $btn-border-style;
+        padding: $btn-padding;
+        transition: $btn-transistion;
+
+    }
+}
+
+
+
+/* autoprefixer grid: on */
+
+
+//********* START layout alignment  *********//
+
+.rowTools__align--left {
+    text-align: left;
+}
+
+.rowTools__align--right {
+    text-align: right;
+}
+
+.rowTools__align--center {
+    text-align: center;
+    .rowContent {
+        h1 {
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+//********* END layout alignment  *********//
+
+//********* START Style modfiers to change row variables *********//
+
+@each $row in $rowColorsLinks {
+    $names: nth($row, 1);
+    $bgColor: nth($row, 2);
+    $txtColor: nth($row, 3);
+    $linkColor: nth($row, 4);
+    $secLinkColor: nth($row, 5);
+
+    .rowTools__style--#{$names} {
+        background-color: $bgColor;
+        color: $txtColor;
+        
+
+        .rowContent {
+            
+            h1 {
+                color: $txtColor;
+            }
+            .rowText{
+                a, a:visited{
+                    color:$linkColor;
+                    &:hover {
+                  color:$secLinkColor;
+                    }
+                  }
+            }
+        }
+    }
+}
+
+//********* END Style modfiers to change row variables *********//
