@@ -5,7 +5,25 @@
     grid-template-columns:1fr;
     grid-gap:10px 10px;
 }
+/*Dividers*/
+.gridDivider {
+  position: relative; /* ADDED */
+}
+@mixin generalDivider(){
+  content: '';
+  position: absolute;
+  border-left: 1px solid #c1c1c1;
+  right: -5px; /* adjust this */
+  height: 100%; /* adjust this */
 
+}
+
+/****** || GENERAL GRID || ******/
+
+@mixin general-Grid() {
+  display: grid;
+  grid-gap: 10px 10px;
+}
 
 /** SINGLE COLUMNS **/
     .col-1 {
@@ -18,6 +36,9 @@
         grid-column:1/2;
     }
     .col-4 {
+        grid-column:1/2;
+    }
+    .col-5 {
         grid-column:1/2;
     }
 
@@ -44,9 +65,15 @@
             grid-column:1/2;
         }
     }
+    .grid-5col{
+        @include generalGrid();
 
+        .col-full{
+            grid-column:1/2;
+        }
+    }
 
-    /**	COLUMN BREAKPOINTS	**/
+    /**	COLUMN BREAKPOINTS MD	**/
     @media only screen and (min-width: $md) {
         .col-1 {
             grid-column:1/2;
@@ -59,6 +86,9 @@
         }
         .col-4 {
             grid-column:4/5;
+        }
+        .col-5{
+            grid-column:5/6;
         }
         
         .grid-2col {
@@ -76,11 +106,45 @@
             }
         }
         .grid-4col {
-            grid-template-columns:repeat(4, 1fr);
+            grid-template-columns:repeat(2, 1fr);
 
             .col-full {
-                grid-column:1/5;
+                grid-column:1/3;
             }
+            .col-1{
+                grid-column:1/2;
+            }
+            .col-2{
+                grid-column:2/3;
+            }  
+            .col-3{
+                grid-column:1/2;
+            }
+            .col-4{
+                grid-column:2/3;
+            }              
+        }
+        .grid-5col {
+            grid-template-columns:repeat(2, 1fr);
+
+            .col-full{
+                grid-column:1/3;
+            }
+                        .col-1{
+                grid-column:1/2;
+            }
+            .col-2{
+                grid-column:2/3;
+            }  
+            .col-3{
+                grid-column:1/2;
+            }
+            .col-4{
+                grid-column:2/3;
+            }
+            .col-5{
+                grid-column:1/3;
+            }                        
         }
     }
 
@@ -100,6 +164,9 @@
             width:100%;
         }
         .col-4 {
+            width:100%;
+        }
+        .col-5{
             width:100%;
         }
         @media only screen and (min-width: $md) {
@@ -136,5 +203,550 @@
                     width:25%;
                 }
             }
+            .grid-5col{
+                display:flex;
+                flex-wrap:wrap;
+
+                .col-full{
+                    width:100%;
+                }
+                .col-1, .col-2, .col-3, .col-4, .col-5{
+                    width:20%;
+                }
+            }
         }
     }
+
+    /**	COLUMN BREAKPOINTS LG	**/
+    @media only screen and (min-width: $lg) {
+        .col-1 {
+            grid-column:1/2;
+        }
+        .col-2 {
+          grid-column:2/3;
+        }
+        .col-3 {
+            grid-column:3/4;
+        }
+        .col-4 {
+            grid-column:4/5;
+        }
+        .col-5{
+            grid-column:5/6;
+        }
+        
+        .grid-2col {
+            grid-template-columns:repeat(2, 1fr);
+
+            .col-full {
+                grid-column:1/3;
+            }
+        }
+        .grid-3col {
+            grid-template-columns:repeat(3, 1fr);
+
+            .col-full {
+                grid-column:1/4;
+            }
+        }
+        .grid-4col {
+            grid-template-columns:repeat(4, 1fr);
+
+            .col-full {
+                grid-column:1/5;
+            }
+        }
+        .grid-5col {
+            grid-template-columns:repeat(5, 1fr);
+
+            .col-full{
+                grid-column:1/6;
+            }
+        }
+    }
+
+    /**	NON-GRID BROWSER FALLBACK   **/
+    @supports (not (display: grid)) or (not (align-self: center)) or (not (justify-self: center)) {
+
+        .col-full {
+            width:100%;
+        }
+        .col-1 {
+            width:100%;
+        }
+        .col-2 {
+            width:100%;
+        }
+        .col-3 {
+            width:100%;
+        }
+        .col-4 {
+            width:100%;
+        }
+        .col-5{
+            width:100%;
+        }
+        @media only screen and (min-width: $lg) {
+            .grid-2col {
+                display:flex;
+                flex-wrap:wrap;
+        
+                .col-full {
+                    width:100%;
+                }
+                .col-1, .col-2 {
+                    width:50%;
+                }
+            }
+            .grid-3col {
+                display:flex;
+                flex-wrap:wrap;
+        
+                .col-full {
+                    width:100%;
+                }
+                .col-1, .col-2, .col-3 {
+                    width:33%;
+                }
+            }
+            .grid-4col {
+                display:flex;
+                flex-wrap:wrap;
+        
+                .col-full {
+                    width:100%;
+                }
+                .col-1, .col-2, .col-3, .col-4 {
+                    width:25%;
+                }
+            }
+            .grid-5col{
+                display:flex;
+                flex-wrap:wrap;
+
+                .col-full{
+                    width:100%;
+                }
+                .col-1, .col-2, .col-3, .col-4, .col-5{
+                    width:20%;
+                }
+            }
+        }
+    }
+
+
+/****** || NEW GENERAL GRID || ******/
+
+
+
+  /** COLUMN GRIDS **/
+.grid1col {
+    @include general-Grid();
+    grid-template-columns: 1fr;
+  
+    & > .col-full {
+      grid-column: 1/2;
+    }
+  }
+  .grid2col {
+    @include general-Grid();
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    & > .col1 {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+    & > .col2 {
+      grid-column: 1/3;
+      grid-row: 2/3;
+    }
+  }
+  .grid3col {
+      grid-template-columns: repeat(3, 1fr);
+       @include general-Grid();
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr;
+  
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column:1/2;
+        grid-row: 2;
+      }
+      
+      & > .col3 {
+        grid-column: 1/2;
+        grid-row: 3;
+      }
+      
+      
+      
+    }
+  .grid4col {
+      grid-template-columns: repeat(4, 1fr);
+       @include general-Grid();
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr;
+  
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column:1/2;
+        grid-row: 2;
+      }
+      
+      & > .col3 {
+        grid-column: 1/2;
+        grid-row: 3;
+      }
+          & > .col4 {
+        grid-column: 1/2;
+        grid-row: 4;
+      }
+      
+      
+    }
+  .grid5col {
+      grid-template-columns: repeat(5, 1fr);
+       @include general-Grid();
+      grid-template-columns: 1fr;
+      grid-template-rows: 5fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column:1/2;
+        grid-row: 2;
+      }
+      
+      & > .col3 {
+        grid-column: 1/2;
+        grid-row: 3;
+      }
+          & > .col4 {
+        grid-column: 1/2;
+        grid-row: 4;
+      }
+          & > .col5 {
+        grid-column: 1/2;
+        grid-row: 5;
+      }    
+      
+    }
+
+    /** COLUMN BREAKPOINTS sm **/
+@media only screen and (min-width: $sm) {
+    .grid2col {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    & > .col1 {
+      grid-column: 1/2;
+      grid-row: 1;
+                  &.gridDivider::after{
+          @include generalDivider();
+        }
+    }
+    & > .col2 {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+    }
+    .grid3col {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      
+      & > .col3 {
+        grid-column: 1/3;
+        grid-row: 2;
+      }
+      
+      
+      
+    }
+    .grid4col {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      
+      & > .col3 {
+        grid-column: 1/2;
+        grid-row: 2;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col4 {
+        grid-column: 2/3;
+        grid-row: 2;
+      }    
+      
+      
+    }
+    .grid5col {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      
+      & > .col3 {
+        grid-column: 1/2;
+        grid-row: 2;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col4 {
+        grid-column: 2/3;
+        grid-row: 2;
+      }    
+       & > .col5 {
+        grid-column: 1/3;
+        grid-row: 3;
+      }     
+      
+    }
+  }
+  
+  /** COLUMN BREAKPOINTS MD **/
+  @media only screen and (min-width: $md) {
+    .grid2col {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    & > .col1 {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+    & > .col2 {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+  }
+    .grid3col {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+        
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      
+      & > .col3 {
+        grid-column: 3/4;
+        grid-row: 1;
+      }
+      
+      
+      
+    }
+    .grid4col {
+      & > .col1 {
+      }
+      & > .col2 {
+      }
+      & > .col3 {
+      }
+      & > .col4 {
+      }  
+    }
+    .grid5col {
+      & > .col1 {
+      }
+      & > .col2 {
+      }
+      
+      & > .col3 {
+      }
+      & > .col4 {
+      }    
+       & > .col5 {
+      }     
+      
+    }
+  }
+  
+  /** COLUMN BREAKPOINTS LG **/
+  @media only screen and (min-width: $lg) {
+    .grid2col {
+    & > .col1 {
+    }
+    & > .col2 {
+    }
+  }
+    .grid3col {
+      & > .col1 {
+      }
+      & > .col2 {
+      }
+      & > .col3 {
+      }
+    }
+    .grid4col {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col3 {
+        grid-column: 3/4;
+        grid-row: 1;
+      }
+      & > .col4 {
+        grid-column: 4/5;
+        grid-row: 1;
+      }  
+    }
+    .grid5col {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      & > .col1 {
+        grid-column: 1/3;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column: 3/5;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }
+      & > .col3 {
+        grid-column: 5/7;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+                      visibility:hidden;
+        }
+      }
+      & > .col4 {
+        grid-column: 1/4;
+        grid-row: 2;
+                    &.gridDivider::after{
+          @include generalDivider();
+        }
+      }    
+       & > .col5 {
+        grid-column: 4/7;
+        grid-row: 2;
+      }     
+      
+    }
+  }
+  
+  /** COLUMN BREAKPOINTS XL **/
+  @media only screen and (min-width: $xl) {
+    .grid2col {
+    & > .col1 {
+    }
+    & > .col2 {
+    }
+  }
+    .grid3col {
+      & > .col1 {
+      }
+      & > .col2 {
+      }
+      
+      & > .col3 {
+      }
+    }
+    .grid4col {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      & > .col3 {
+        grid-column: 3/4;
+        grid-row: 1;
+      }
+      & > .col4 {
+        grid-column: 4/5;
+        grid-row: 1;
+      }  
+    }
+    .grid5col {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      & > .col1 {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      & > .col2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      & > .col3 {
+        grid-column: 3/4;
+        grid-row: 1;
+                    &.gridDivider::after{
+          @include generalDivider();
+                      visibility:visible;
+        }
+      }
+      & > .col4 {
+        grid-column: 4/5;
+        grid-row: 1;
+      }    
+       & > .col5 {
+        grid-column: 5/6;
+        grid-row: 1;
+      }     
+      
+    }
+  }
