@@ -93,11 +93,6 @@
 	margin: 0 auto 20px auto; 
 	text-align: center;
 	&:after {
-		content: "";
-		display: block;
-		margin: 0 auto;
-		width: 30%;
-		border-bottom: 5px dotted #999;
 	}
 }
 

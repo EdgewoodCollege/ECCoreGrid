@@ -134,7 +134,8 @@ $colors__gray--lighter: #f0f0f0;
             transform: translateY(38px);
 
             &--expanded {
-                max-height: 1000vh;
+                /*hight needed to be larger to fit all content on small screens*/
+                max-height: 2000vh;
                 opacity: 1;
                 padding-bottom: 2 * $units;
                 transform: none;

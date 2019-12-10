@@ -1,4 +1,4 @@
-/* _utilities--sm.scss */
+/* _utilities--mq.scss */
 $rowColors: ('red' $red #fff) ('black' #000 #fff) ('grey' $grey #000) ('white' #fff #000);
 //*added new array so we can manage links at same time as row style colors
 //  (1, 2, 3, 4)  1= Row/style name, 2= background color, 3= text color, 4=link color, 5=link color hover
@@ -17,11 +17,6 @@ $rowColorsLinks: ('red' $red #fff #fff #000) ('black' #000 #fff #fff $red) ('gre
     font-weight: 400;
 
     &:after {
-        content: "";
-        display: none;
-        margin: 0 auto;
-        width: 30%;
-        border-bottom: 5px dotted;
     }
 }
 

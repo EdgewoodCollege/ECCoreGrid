@@ -1,0 +1,57 @@
+/* _facStaffProfile--mq.scss */ 
+
+
+@media only screen and (min-width: 960px) {
+    //Default layout for row
+
+
+.facStaffProfileTitle {
+
+    .facStaffProfileTitle__content {
+        //Setting the default grid
+        grid-template-columns: 1vw minmax(auto, 10vw) minmax(auto, 80vw) 1vw;
+        grid-template-rows: 1;
+        grid-template-areas: ". facStaffProfileTitle__image facStaffProfileTitle__text .";
+
+        .facStaffProfileTitle__image {
+            grid-area: facStaffProfileTitle__image;
+            grid-row: 1;
+            text-align: center;
+
+            img {
+            }
+        }
+        .facStaffProfileTitle__text {
+            grid-row: 1;
+
+            .facStaffProfileTitle__title {
+            }
+            .facStaffProfileTitle__name {
+
+            }
+            .facStaffProfileTitle__email {
+            }
+            .facStaffProfileTitle__bio {}
+        }
+
+    }
+}
+
+    .facStaffProfileTitle__content {
+        grid-template-columns: 5vw minmax(auto, 10vw) minmax(auto, 80vw) 5vw;
+        grid-template-areas: ". facStaffProfileTitle__image facStaffProfileTitle__text .";
+        grid-column-gap: 15px;
+        grid-template-rows: 1;
+
+        .facStaffProfileTitle__image {
+            img {
+                width: 100%;
+                border-radius: 50%;
+                border-style: none;
+                max-width: 200px;
+
+            }
+        }
+
+    }
+}

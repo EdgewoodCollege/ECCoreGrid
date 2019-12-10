@@ -76,6 +76,7 @@
             
             h1 {
                 color: $txtColor;
+                margin-bottom:0;
             }
             .rowText{
                 a, a:visited{
@@ -84,6 +85,12 @@
                   color:$secLinkColor;
                     }
                   }
+                  & >p:last-child{
+                      margin-bottom:0;
+                  }
+            }
+            & > div:last-child{
+                padding-bottom:0;
             }
         }
     }
