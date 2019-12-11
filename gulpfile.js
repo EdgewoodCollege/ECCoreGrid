@@ -232,11 +232,11 @@ gulp.task('watch', function () {
 
 // gulp build
 //gulp.task('build', ['scss', 'bscss', 'js', 'images', 'containers', 'manifest']);
-gulp.task('build', ['copyfiles', 'scss', 'js', 'images', 'containers', 'manifest']);
+gulp.task('build', gulp.series('copyfiles', 'scss', 'js', 'images', 'containers', 'manifest'));
 
 //gulp.task('test', gulpSequence('copyFiles', ['scss', 'js', 'images', 'containers', 'manifest']));
 
 
 
 // gulp package
-gulp.task('package', sequence('build', 'buildzips', 'zipfiles', 'cleanup'));
+gulp.task('package', gulp.series('build', 'buildzips', 'zipfiles', 'cleanup'));
