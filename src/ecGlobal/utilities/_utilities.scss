@@ -1,7 +1,6 @@
 // _utility.scss
 
 
-@import 'lity'; 
 
 
 .table-wrap {
@@ -55,25 +54,6 @@
     }
 }
 // ************* END Dividers ******************* */
-
-// ************ START Layout / Column modifiers ********************/
-
-//this puts border on left and right... not sure why I don't need :after also
-.middleColBorders:before {
-	content: "";
-    display: block;
-    position: absolute;
-    margin: 0 auto;
-    width: 100%;
-    border-left: 1px dotted #000;
-    border-right: 1px dotted #000;
-    height: 80%;
-    top: 10%;
-	left: 0;
-
-}
-
-// ************ END Layout / Column modifiers ********************/
 
 
 //utility to convert HEX to an RGBA
@@ -168,7 +148,50 @@ $rowTypes: ("Red" #8f1324 #fff) ("Black" #000 #fff) ("Grey" #ccc #000) ("White" 
     }
 }
 
+/**RESPONSIVE TABLE**/
 
+table.responsiveTable {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+
+}
+
+table.responsiveTable tr {
+    padding: .35em;
+}
+
+table.responsiveTable th,
+table.responsiveTable td {
+    padding: .625em;
+    text-align: left;
+
+}
+
+/******************* START RESPONSIVE TABLE  **********************/
+
+table.responsiveTable {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+	tr {
+		padding: .35em;
+	}
+	th {
+		padding: .625em;
+		text-align: left;
+	}
+	td {
+		padding: .625em;
+		text-align: left;
+	}
+}
+
+/******************* END RESPONSIVE TABLE  **********************/
 
 
 @import 'utility--mq';

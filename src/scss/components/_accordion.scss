@@ -93,18 +93,20 @@
 					}
 				}
 				&:before {
+					display: none;
 					content:'\f0da';
 					font-family:'Font Awesome 5 Free';
 					float:right;
-					font-weight:700;
+					font-weight:900;
 					color:$black;
-					padding-right:0px;
+					padding-right:10px;
 					transition: all .25s linear;
 
 					&:active {
 						transform: rotate(90deg);
 					}
 				}
+			
 			}
 		}
 		.ui-widget-content {
