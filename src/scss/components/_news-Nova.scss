@@ -131,27 +131,17 @@
   .edn_adminActions > a, .admin_action {
     display: inline-block;
     margin: 10px 5px 10px 0;
-    border: solid 3px $gray-400;
+    border: solid 3px $grey;
     text-decoration: none !important;
     line-height: 1;
     padding-right: 5px;
-    color: $gray-400 !important;
+    color: $grey !important;
     @include prefix_transition(300ms, ease);
 
     &:hover {
       text-decoration: none;
       background-color: $gray-300;
       color: $white !important;
-    }
-    &::before {
-      font-family: "FontAwesome";
-      display: inline-block;
-      margin-right: 5px;
-      font-size: 15px;
-      background-color: $gray-400;
-      color: $white;
-      padding: 5px;
-      text-decoration: none !important;
     }
   }
   .edn_articleMedia {

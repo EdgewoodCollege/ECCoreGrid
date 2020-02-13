@@ -25,7 +25,7 @@
             grid-column:1/2;  
 
             &:nth-child(even) {
-                background-color:$gray-400;
+                background-color:$grey;
             }
             .ccEventDescription {
                 font-size:.7em;
