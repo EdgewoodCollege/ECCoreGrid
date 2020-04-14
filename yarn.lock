@@ -88,8 +88,9 @@ accordion@^3.0.2:
   resolved "https://registry.yarnpkg.com/accordion/-/accordion-3.0.2.tgz#1badb97f4eab94208165f794aaaa97198781fdfe"
 
 acorn@5.X, acorn@^5.0.3:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.3.0.tgz#7446d39459c54fb49a80e6ee6478149b940ec822"
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 ajv@^6.5.5:
   version "6.10.2"
