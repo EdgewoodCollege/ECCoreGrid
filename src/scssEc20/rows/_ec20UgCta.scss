@@ -1,0 +1,132 @@
+@mixin ec20ugcta-icon {
+  max-width: 125px;
+	max-height: 125px;
+	padding: 1.5rem;
+	height: auto;
+	filter: var(--ec20icon-black);
+	transition: var(--icon-transition-speed);
+}
+
+
+.ec20ugcta {
+	grid-row-gap: 50px;
+	display: grid;
+	grid-template-columns: 1fr ;
+  grid-template-rows:1fr;
+  padding:0;
+	.ec20ugcta__icon {
+		padding: 10px;
+	}
+	.ec20ugcta__rarrow {
+		justify-self: end;
+		display: none;
+		#rightArrow {
+			height: 130px;
+		}
+	}
+	.ec20ugcta__request {
+		text-align: center;
+    .ec20icon {
+      @include ec20ugcta-icon
+	  }
+	}
+	.ec20ugcta__start {
+		text-align: center;
+    .ec20icon {
+      @include ec20ugcta-icon
+	  }
+	}
+	.ec20ugcta__arrange {
+		text-align: center;
+    .ec20icon {
+      @include ec20ugcta-icon
+	  }
+	}
+	.ec20ugcta__larrow {
+		display: none;
+		justify-self: start;
+		#leftArrow {
+			height: 130px;
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: $sm) {
+  .ec20icon {
+
+	padding: 2rem;
+
+}
+	.ec20ugcta {
+		row-gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+  padding:1rem 0;
+		.ec20ugcta__icon {}
+		.ec20ugcta__rarrow {
+      
+
+			#rightArrow {}
+		}
+		.ec20ugcta__request {
+			padding-left: 10vw;
+		}
+		.ec20ugcta__arrange {
+			padding-right: 10vw;
+		}
+		.ec20ugcta__start {
+			grid-column: 1/3;
+			grid-row: 2/3;
+		}
+		.ec20ugcta__larrow {
+     
+    }
+	}
+}
+
+
+
+///////////////////////////////////////////////////////
+// Large devices (desktops, 992px and up)
+
+
+@media only screen and (min-width: $lg) {
+	.ec20ugcta {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		.ec20ugcta__rarrow {
+			grid-column: 1/2;
+			grid-row: 1/2;
+      display:grid;
+      align-self:center;
+			#rightArrow {}
+		}
+		.ec20ugcta__request {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			padding: 0;
+		}
+		.ec20ugcta__start {
+			grid-column: 3/4;
+			grid-row: 1/2;
+		}
+		.ec20ugcta__arrange {
+			grid-column: 4/5;
+			grid-row: 1/2;
+			padding: 0;
+		}
+		.ec20ugcta__larrow {
+			grid-column: 5/6;
+			grid-row: 1/2;
+       display:grid;
+      align-self:center;
+			#leftArrow {}
+		}
+	}
+}
+
+///////////////////////////////////////////////////////
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {}

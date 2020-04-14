@@ -1,0 +1,31 @@
+
+
+// *************** START managing Row Modifications ******************************/
+.ec20btn{
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: .8rem 1.5rem .8rem 1.5rem;
+    border-radius: 4px;
+    background-color: $ec20red;
+    border: 2px solid $ec20red;
+    color: $ec20white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    display: inline-block;
+    text-align: center;
+  }
+  $ec20btntypes: ("red" $ec20red) ("black" $ec20black) ("grey" $ec20grey) ("greyLight" $ec20greyLight) ("gold" $ec20gold) ("white" $ec20white);
+  @each $whatever in $ec20btntypes {
+    $whatevername: nth($whatever, 1);
+    $whatevercolor: nth($whatever, 2);
+    .ec20btn__outline--#{$whatevername} {
+      border: 1px solid $whatevercolor;
+    }
+    .ec20btn__text--#{$whatevername} {
+      color:$whatevercolor;
+    }
+    .ec20btn__bg--#{$whatevername} {
+      background-color:$whatevercolor;
+    }
+    
+  }
