@@ -1,0 +1,162 @@
+.ec20QuotePhoto {
+  display: grid;
+  grid-template-rows: 250px 250px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "person person"
+    "beyou content"
+    "quote quote";
+
+  .person {
+    display: grid;
+    grid-area: person-start / beyou-end / person-end / beyou-end;
+    background-image: url("https://www.edgewood.edu/images/default-source/freshman-admissions/natashabg.jpg?ver1");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 500px;
+    width: 100vw;
+  }
+  .beYou {
+    grid-area: beyou-start / beyou-end / person-end / beyou-end;
+    margin: 0 0 0 3rem;
+    img {
+      width: 300px;
+    }
+  }
+
+  .quote {
+    grid-area: quote;
+    padding: 2rem;
+    .title {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
+    }
+    .text {
+      font-family: "EB Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 2.2rem;
+      padding: 0 0 1rem 0;
+    }
+    .quoter {
+      font-family: "EB Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+    .quoterDegree {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) {
+  .ec20QuotePhoto {
+    .person {
+    }
+    .beYou {
+      img {
+      }
+    }
+
+    .quote {
+      .title {
+      }
+      .text {
+      }
+      .quoter {
+      }
+      .quoterDegree {
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+  .ec20QuotePhoto {
+    grid-template-areas: "beYou beYou" "quote .";
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 150px 1fr;
+    background-image: url("https://www.edgewood.edu/images/default-source/freshman-admissions/natashabg.jpg?ver1");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 500px;
+    .person {
+      grid-area: person;
+      display: none;
+    }
+    .beYou {
+      grid-area: beYou;
+      margin: 5rem 0 0 3rem;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    .quote {
+      grid-area: quote;
+      margin: 1rem 0 3rem 3rem;
+      .quoter {
+      }
+      .quoterDegree {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) {
+  .ec20QuotePhoto {
+    .person {
+    }
+    .beYou {
+      margin: 2rem 0 0 3rem;
+
+      img {
+      }
+    }
+
+    .quote {
+      .title {
+      }
+      .text {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+      .quoter {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {
+  .ec20QuotePhoto {
+    .person {
+    }
+    .beYou {
+      margin: 2rem 0 0 5rem;
+
+      img {
+      }
+    }
+
+    .quote {
+      padding: 0 0 0 5rem;
+
+      .title {
+      }
+      .text {
+      }
+      .quoter {
+      }
+    }
+  }
+}

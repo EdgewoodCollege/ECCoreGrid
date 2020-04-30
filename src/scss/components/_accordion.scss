@@ -38,11 +38,18 @@
 	}
 
 	//MAIN ACCORDION
+	.ui-accordion{
+		.ui-accordion-content{
+			padding: 1em 2.2em;
+			border-top: 0;
+		}
+	}	
 	.ui-widget {
 		font-size:.8em;
 
+
 		h3.ui-accordion-header {
-			background-color:$gray-200;
+			background-color:$grey;
 			border-left:15px solid $primary-color;
 			border-bottom:1px solid $gray-500;
 			position:relative;
@@ -66,7 +73,7 @@
 				}
 			}
 			&:before {
-				background: linear-gradient(to bottom right, $gray-200 0%, $gray-300 100%);
+				background: linear-gradient(to bottom right, $grey 0%, $grey 100%);
 				opacity: 0;
 				transition: opacity .5s ease;
 			}
@@ -81,6 +88,9 @@
 			}
 			a {
 				padding:13px 13px 13px 23px;
+        padding:13px 13px 13px 22px;
+				display: block;
+				font-size: 1em;
                 svg {
                     margin: 0 .5rem 0 0;
                 }
@@ -92,6 +102,7 @@
 						transition: all .25s linear;
 					}
 				}
+
 				&::before {
 					display: none;
 					content:'\f0da';
@@ -106,11 +117,11 @@
 						transform: rotate(90deg);
 					}
 				}
-			
+
 			}
 		}
 		.ui-widget-content {
-			background-color:$gray-300;
+			background-color:#eee;
 			overflow: auto;
             padding:1rem
 		}
@@ -134,12 +145,12 @@
 		}
 	}
 	.ui-widget-overlay {
-		background-color:$gray-400;
+		background-color:$grey;
 		opacity: .30;
 		filter: Alpha(Opacity=30);
 	}
 	.ui-widget-shadow {
-		background-color: $gray-400;
+		background-color: $grey;
 		opacity: .30;
 		filter: Alpha(Opacity=30);
 	}

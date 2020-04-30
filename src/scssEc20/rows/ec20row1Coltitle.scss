@@ -1,0 +1,258 @@
+/* _row1ColTitle.scss */
+/* autoprefixer grid: on */
+
+// (class name, bg Color, text color, sub-title color, link color, Hover link color)
+$ec20rowColors: ("red" $ec20red #fff #fff #fff #000)
+  ("black" #000 #fff #fff #fff $ec20red)
+  ("grey" $ec20greyLight #000 #000 $ec20red #000)
+  ("white" #fff $ec20grey $ec20red $ec20red #000)
+  ("gold" #fff $ec20grey #000 $ec20gold #000);
+
+//********* START Core styling for this specific row *********//
+
+.ec20row1ColTitle {
+  font-family: "Source Sans Pro", sans-serif;
+  display: grid;
+  align-items: center;
+  padding: 5rem 0 5rem 0;
+
+  //Setting the default grid
+  grid-template-columns: 0vw minmax(auto, 100vw) 0vw;
+  grid-template-rows: auto;
+  grid-template-areas: ". rowContent .";
+  .rowContent {
+    grid-area: rowContent;
+    padding: 0 1.5rem;
+    .rowTitle,
+    .rowTitleLine,
+    h1 {
+      text-transform: uppercase;
+      font-family: "Source Sans Pro", sans-serif;
+      padding: 0;
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+    .rowTitleLine {
+      display: grid;
+      grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+      align-items: center;
+      text-align: center;
+      grid-gap: 1rem;
+      width: 100%;
+      margin: 0 0 2rem 0;
+      &:before,
+      &:after {
+        content: "";
+        border-top: 2px solid $ec20red;
+      }
+    }
+    .rowSubtitle,
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      padding: 0 0 2rem 0;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .rowSubtitleLine {
+      font-size: 1.5rem;
+      font-style: italic;
+      grid-area: title;
+      display: grid;
+      grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+      align-items: center;
+      text-align: center;
+      grid-gap: 1rem;
+      width: 100%;
+      margin: 0 0 2rem 0;
+      &:before,
+      &:after {
+        content: "";
+        border-top: 2px solid #d8b45e;
+      }
+    }
+    .rowText {
+      font-size: 1.2rem;
+      line-height: 3rem;
+      b {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sm) {
+  .ec20row1ColTitle {
+    .rowContent {
+      .rowTitle,
+      .rowTitleLine,
+      h1 {
+        font-size: 2rem;
+      }
+      .rowSubtitle,
+      h2 {
+      }
+      .rowText {
+        b {
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+  .ec20row1ColTitle {
+    padding: 6rem 0;
+    //Setting the default grid
+    grid-template-columns: 10vw minmax(auto, 100vw) 10vw;
+    grid-column-gap: 15px;
+    grid-template-areas: ". rowContent .";
+    .rowContent {
+      padding: 0 1.5rem;
+      .rowTitle,
+      .rowTitleLine,
+      h1 {
+        font-size: 2.5rem;
+      }
+      .rowSubtitle,
+      h2 {
+        font-size: 2.5rem;
+      }
+      .rowText {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        b {
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) {
+  .ec20row1ColTitle {
+    padding: 7rem 0;
+    .rowContent {
+      .rowTitle,
+      .rowTitleLine,
+      h1 {
+      }
+      .rowSubtitle,
+      h2 {
+      }
+      .rowText {
+        b {
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $xl) {
+}
+
+//********* END Core styling for this specific row *********//
+
+//********* START layout alignment  *********//
+
+.ec20row1ColTitle__align--left {
+  text-align: left;
+}
+
+.ec20row1ColTitle__align--right {
+  text-align: right;
+}
+
+.ec20row1ColTitle__align--center {
+  text-align: center;
+  .rowContent {
+    .rowTitle,
+    h1 {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.ec20rowValues {
+  color: $ec20gold;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+.verticalBar {
+  color: #636363;
+  padding: 0 1rem;
+}
+
+@media (min-width: $sm) {
+  .ec20rowValues {
+    font-size: 1.7rem;
+    padding: 2rem 0;
+  }
+  .verticalBar {
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $lg) {
+  .ec20rowValues {
+    font-size: 2.5rem;
+    padding: 3rem 0;
+  }
+  .verticalBar {
+  }
+}
+
+//********* END layout alignment  *********//
+
+//********* START Style modfiers to change row variables *********//
+
+@each $row in $ec20rowColors {
+  $names: nth($row, 1);
+  $bgColor: nth($row, 2);
+  $txtColor: nth($row, 3);
+  $subTitleColor: nth($row, 4);
+  $linkColor: nth($row, 5);
+  $secLinkColor: nth($row, 6);
+
+  .ec20row1ColTitle__style--#{$names} {
+    background-color: $bgColor;
+    color: $txtColor;
+    .rowContent {
+      .rowTitle,
+      .rowTitleLine,
+      h1 {
+      }
+      .rowSubtitle,
+      h2 {
+        color: $subTitleColor;
+      }
+
+      //I want to put a loop in Here? for color overriding
+      .rowSubtitleLine {
+        color: $subTitleColor;
+      }
+      .rowText {
+        a,
+        a:visited {
+          color: $linkColor;
+          &:hover {
+            color: $secLinkColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+//********* END Style modfiers to change row variables *********//
