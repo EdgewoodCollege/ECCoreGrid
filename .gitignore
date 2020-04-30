@@ -2,3 +2,7 @@ node_modules/
 build/
 dist/*
 dist/
+src/scssEc20/*
+src/scssEc20/
+src/ecGlobal/*
+src/ecGlobal/
