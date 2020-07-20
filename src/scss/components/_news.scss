@@ -354,7 +354,7 @@ margin-bottom: 30px;
   bottom: 10px;
   left: 5px;
   right: 5px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_mediaContainer .edn_galleryLink:hover:before {
   color: $primary-color;
@@ -385,7 +385,7 @@ margin-bottom: 30px;
   display: block;
   color: #fff;
   line-height: 1.2;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 22px;
 }
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
@@ -587,7 +587,7 @@ margin-bottom: 30px;
   text-shadow: none;
   text-decoration: none;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 12px;
   text-transform: uppercase;
   padding: 7px 18px;
@@ -731,7 +731,7 @@ margin-bottom: 30px;
   float: right;
   clear: right;
   margin: 7px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 22px;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_listEventDetails {
@@ -863,7 +863,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_aditionalBox.edn_aditionalBoxImage ul li a span {
   display: block;
   font-size: 13px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   line-height: 1.1;
   margin-bottom: 5px;
@@ -943,7 +943,7 @@ margin-bottom: 30px;
   vertical-align: top;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .EDN_cf_all_fields_container > table tr td.EDN_cf_all_fields_table_label {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .EDN_cf_all_fields_container > table tr td .EDN_cf_checkbox .EDN_cf_checkbox_icon:before {
   content: "";
@@ -973,7 +973,7 @@ margin-bottom: 30px;
   border: 1px solid #e78a04;
   background-color: #f9ab3c;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 12px;
   text-transform: uppercase;
   padding: 7px 18px;
@@ -1189,7 +1189,7 @@ margin-bottom: 30px;
   margin: 0 0 15px;
   padding: 0;
   color: $primary-color;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-weight: normal;
   letter-spacing: normal;
   font-size: 24px;
@@ -1413,7 +1413,7 @@ margin-bottom: 30px;
   display: inline-block;
   border: solid 1px #ddd;
   color: $primary-color;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 11px;
   line-height: 1;
   text-transform: uppercase;
@@ -2204,7 +2204,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid.eds_subCollection_calendar .archive_list.events ul li > a {
   color: #504e4e;
   text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_calendar .archive_list.events ul li > a:hover {
   text-decoration: none;
@@ -2212,7 +2212,7 @@ margin-bottom: 30px;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_calendar .archive_list.events ul li > a > span {
   color: $primary-color;
-  font-family: "PT Sans", sans-serif;
+  font-family: $primary-font;
   font-size: 13px;
 }
 
@@ -2273,7 +2273,7 @@ margin-bottom: 30px;
   background-color: #fff;
   border-radius: 4px 4px 0 0;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 15px;
   color: #504e4e;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
@@ -2292,7 +2292,7 @@ margin-bottom: 30px;
   padding: 0;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .bread_crumbs > a {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 14px;
   color: #747474;
   text-decoration: none;
@@ -2632,7 +2632,7 @@ margin-bottom: 30px;
   text-shadow: none;
   text-decoration: none;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 10px;
   text-transform: uppercase;
   padding: 3px 5px;
@@ -2721,7 +2721,7 @@ margin-bottom: 30px;
   }
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .article_comments .add_comment > div table td.left {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   width: 15%;
   color: #424242;
   font-size: 15px;
@@ -3121,7 +3121,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid .edn_recentCommentsHeader > h4 {
   font-size: 15px;
   line-height: 1.3;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   color: #fff;
   background: $primary-color;
   padding: 5px 25px;
@@ -3314,7 +3314,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid.eds_subCollection_contentBlock .edn__contentBlock_title {
   font-size: 15px;
   line-height: 1.3;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   color: #fff;
   background: $primary-color;
   padding: 5px 25px;
@@ -3933,7 +3933,7 @@ margin-bottom: 30px;
   text-align: center;
   line-height: 1;
   font-size: 14px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   color: #504e4e;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_contentBlock .edn_verticalList .edn__contentBlock_hiddenItemWrapper .edn_contentBlock_trigger::after {
@@ -4212,7 +4212,7 @@ margin-bottom: 30px;
   color: $primary-color;
   font-size: 12px;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_article.edn_articleDetails .edn_articleTags > a {
   display: inline-block;
@@ -4309,7 +4309,7 @@ margin-bottom: 30px;
   border: 1px solid $primary-color;
   background: none #fff;
   text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family:$primary-font;
   font-size: 12px;
   text-transform: uppercase;
   color: $primary-color;
@@ -4440,7 +4440,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid.eds_subCollection_news .in_article_image .image_title {
   margin: 5px 0 0;
   padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 14px;
   color: $primary-color;
 }
@@ -4955,7 +4955,7 @@ margin-bottom: 30px;
   display: block;
   color: #666161;
   line-height: 1.2;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 22px;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_article.edn_eventsSimple > section > time > span:first-child {
@@ -5295,7 +5295,7 @@ margin-bottom: 30px;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_article.edn_timeline .edn_timelineTimeLocation > time {
   display: block;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   line-height: 1;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_article.edn_timeline .edn_timelineTimeLocation > time.edn_timelineDate {
@@ -5307,7 +5307,7 @@ margin-bottom: 30px;
   margin: 5px 0;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .edn_article.edn_timeline .edn_timelineTimeLocation .edn_eventPrice {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 18px;
   display: inline-block;
   margin-top: 5px;
@@ -5541,7 +5541,7 @@ margin-bottom: 30px;
 .eds_news_EdgewoodGrid.eds_subCollection_news .article_pagination > span {
   display: inline-block;
   font-size: 13px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   line-height: 1;
   padding: 7px 10px;
   border-left: solid 1px $primary-color;
@@ -5636,7 +5636,7 @@ margin-bottom: 30px;
 }
 .eds_news_EdgewoodGrid.eds_subCollection_news .ednMoreArticlesTriggerWrapper .trigger > span {
   color: $primary-color;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   line-height: 1;
   font-size: 15px;
   display: block;
@@ -5784,7 +5784,7 @@ margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.1;
   color: #504e4e;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   position: absolute;
   top: 100%;
   opacity: 0;
@@ -5976,7 +5976,7 @@ margin-bottom: 30px;
 }
 .qtip.edn_calendarbox_EdgewoodGrid .qtip-content .title {
   display: block;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 14px;
   color: $primary-color;
 }
@@ -6010,13 +6010,13 @@ margin-bottom: 30px;
   padding: 0;
   font-size: 18px;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   color: #504e4e;
 }
 .qtip.edn_calendarbox_EdgewoodGrid .qtip-content .wrapper > .article > p.title a {
   font-size: 18px;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   color: #504e4e;
   text-decoration: none;
 }
@@ -6054,7 +6054,7 @@ margin-bottom: 30px;
   text-shadow: none;
   text-decoration: none;
   line-height: 1;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 12px;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -6268,7 +6268,7 @@ margin-bottom: 30px;
   background: none #fff;
   text-shadow: none;
   text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 12px;
   text-transform: uppercase;
   padding: 0 18px;
@@ -6722,7 +6722,7 @@ margin-bottom: 30px;
   background: none #fff;
   text-shadow: none;
   text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 12px;
   line-height: 29px;
   text-transform: uppercase;
@@ -7254,7 +7254,7 @@ margin-bottom: 30px;
   list-style-type: none;
   cursor: pointer;
   color: #b4b4b4;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $primary-font;
   font-size: 16px;
   border: solid 1px $primary-color;
   border-bottom: none !important;
