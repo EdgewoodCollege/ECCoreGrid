@@ -2,6 +2,9 @@
 
 
 $primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Spectral', serif;
+
+
 
 // FLUID CALCULATION ALGORITHM || calc([min-font] + [max-font - min-font] * ((100vw - [min-screen-width]) / [max-screen-width - min-screen-width]) ||
     // SOURCED FROM     || https://css-tricks.com/snippets/css/fluid-typography/ ||
