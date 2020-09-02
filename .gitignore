@@ -2,3 +2,6 @@ node_modules/
 build/
 dist/*
 dist/
+src/scssEc20
+**/scssEc20/*
+scssEc20/

@@ -1,14 +1,8 @@
 /* _fonts.scss */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
 
-$roboto: 'Roboto', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
-$Roboto: 'Roboto', sans-serif;
-$OpenSans: 'Open Sans', sans-serif;
-
-
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Spectral', serif;
 
 // FLUID CALCULATION ALGORITHM || calc([min-font] + [max-font - min-font] * ((100vw - [min-screen-width]) / [max-screen-width - min-screen-width]) ||
     // SOURCED FROM     || https://css-tricks.com/snippets/css/fluid-typography/ ||
