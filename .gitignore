@@ -2,6 +2,13 @@ node_modules/
 build/
 dist/*
 dist/
-src/scssEc20
-**/scssEc20/*
-scssEc20/
+
+src/scssEc20/*
+src/scssEc20/
+src/ecGlobal/*
+src/ecGlobal/
+
+src/styles/scssEc20/
+
+styles/ecGlobal/
+
