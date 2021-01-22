@@ -16,7 +16,7 @@
     "install": "^0.13.0",
     "jquery": "^3.5.0",
     "jquery.mmenu": "^7.3.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "minimatch": "^3.0.4",
     "normalize.css": "^8.0.1",
     "postcss": "^7.0.27"
