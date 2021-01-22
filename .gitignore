@@ -5,10 +5,12 @@ dist/
 
 src/scssEc20/*
 src/scssEc20/
+src/scssEc21/*
+src/scssEc21/
 src/ecGlobal/*
 src/ecGlobal/
 
 src/styles/scssEc20/
-
+src/styles/scssEc21/
 styles/ecGlobal/
 
