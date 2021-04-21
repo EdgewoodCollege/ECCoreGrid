@@ -21,7 +21,7 @@
 			<li><a href="https://www.edgewood.edu/admissions/visit">Visit</a></li>
 			<li><a href="https://www.edgewood.edu/admissions/tuition-and-financial-aid">Tuition &amp; Financial Aid</a></li>
 			<li><a href="https://www.edgewood.edu/admissions/request-information">Request Information</a></li>
-			<li><a href="https://give.edgewood.edu/">Give</a></li>
+			<li><a href="https://www.edgewood.edu/give">Give</a></li>
 		</ul>
 	</div>
 	<div class="socialMedia">
