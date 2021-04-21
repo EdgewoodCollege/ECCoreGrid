@@ -36,7 +36,7 @@ var gulp          = require('gulp'),
 ------------------------------------------------------*/
     
 // Compresses images for production.
-gulp.task('images', function() {
+gulp.task('images', function(done) {
 	return gulp.src( './images/**/*.{jpg,jpeg,png,gif}' )
 		.pipe(imagemin({
       interlaced: true,
@@ -45,6 +45,7 @@ gulp.task('images', function() {
       svgoPlugins: [{removeViewBox: true}]
     }))
 		.pipe(gulp.dest( './dist/images/' ));
+    done();
 });
 
 
@@ -56,7 +57,7 @@ gulp.task('images', function() {
 // Checks for errors and concats. Minifies.
 
 
-gulp.task('scss', function() {
+gulp.task('scss', function(done) {
   var plugins = [
       autoprefixer,
       cssnano
@@ -69,6 +70,7 @@ gulp.task('scss', function() {
   .pipe(sourcemaps.write(''))
 
   .pipe(gulp.dest( './dist/css/'));
+  done();
 });
 
 /*
@@ -85,7 +87,7 @@ gulp.task('scss', function() {
 
 // Development JS creation.
 // Checks for errors and concats. Minifies.
-gulp.task('js', function() {
+gulp.task('js', function(done) {
 
 
   return gulp.src( [ './'+src+'js/*.js'] )
@@ -112,6 +114,7 @@ gulp.task('js', function() {
       //   title : 'JSLint'
       // };
     }))
+    done();
 });
 
 
@@ -120,10 +123,11 @@ gulp.task('js', function() {
 *	DNN TASKS
 ------------------------------------------------------*/
 
-gulp.task('containers', function() {
+gulp.task('containers', function(done) {
   gulp.src('./containers/*')
     .pipe(gulp.dest('../../Containers/'+project+'/'));
     //.pipe(notify({message: 'Containers updated!', title : 'containers', sound: false}));
+    done();
 });
 
 
@@ -134,7 +138,7 @@ gulp.task('containers', function() {
 
 // Pulls from packages and distributes where necessary.
 // Add/modify as needed.
-gulp.task('copyfiles', function() {
+gulp.task('copyfiles', function(done) {
 
   // This copies the normalize css file over to the scss components folder.
 	// This will overwrite any changes you've made to normalize.css.
@@ -145,12 +149,12 @@ gulp.task('copyfiles', function() {
   // gulp.src('./'+node+'/accordion/src/accordion.js')
   // .pipe(gulp.dest('./'+dist+'/js/'));
   // gulp.src('./'+node+'/accordion/src/accordion.css').pipe(rename('_accordion.scss')).pipe(gulp.dest('./'+src+'scss/components/'));
-    
+  done();
 });
 
 
 // Takes the information provided at the top of this file and populates it into the manifest.dnn file.
-gulp.task('manifest', function() {
+gulp.task('manifest', function(done) {
   gulp.src('./manifest.dnn')
     .pipe(replace(/\<package name\=\"(.*?)(?=\")/, '<package name="'+company+ '.' +project))
     .pipe(replace(/type\=\"Skin\" version\=\"(.*?)(?=\")/, 'type="Skin" version="'+version))
@@ -164,6 +168,7 @@ gulp.task('manifest', function() {
     .pipe(replace(/(\\Skins\\)(.*?)(?=\\)/g, '\\Skins\\'+project))
     .pipe(replace(/(\\Containers\\)(.*?)(?=\\)/g, '\\Containers\\'+project))
     .pipe(gulp.dest('./'));
+    done();
     //.pipe(notify({message: 'Manifest updated successfully!', title : 'manifest', sound: false}));
 });
 
@@ -174,26 +179,29 @@ gulp.task('manifest', function() {
 * ------------------------------------------------------*/
 
 // Zips dist folder
-gulp.task('zipdist', function() {
+gulp.task('zipdist', function(done) {
   return gulp.src('dist/**/*')
     .pipe(zip('dist.zip'))
-    .pipe(gulp.dest('./'+temp))
+    .pipe(gulp.dest('./'+temp));
+    done();
 });
 
 // Zips containers folder
-gulp.task('zipcontainers', function() {
+gulp.task('zipcontainers', function(done) {
   return gulp.src('./containers/**/*')
     .pipe(zip('cont.zip'))
-    .pipe(gulp.dest('./'+temp))
+    .pipe(gulp.dest('./'+temp));
+    done();
 });
 
 // Zips everything else
-gulp.task('zipelse', function() {
+gulp.task('zipelse', function(done) {
   return gulp.src(['./menus/**/*', './partials/*', '*.{ascx,xml,html,htm}'], {base: '.'})
     .pipe(gulp.dest('./'+temp))
     .pipe(replace('dist/', ''))
     .pipe(zip('else.zip'))
-    .pipe(gulp.dest('./'+temp))
+    .pipe(gulp.dest('./'+temp));
+    done();
 });
 
 // Runs all the zip tasks
@@ -203,16 +211,18 @@ gulp.task('buildzips', function (cb) {
 
 // Zips the .zip files and single files into a package zip file.
 // Will need to change if adding specific files.
-gulp.task('zipfiles', function() { 
+gulp.task('zipfiles', function(done) { 
   return gulp.src(['./'+temp+'*.zip','*.{dnn,png,jpg}', 'LICENSE'])
     .pipe(zip(project+'\_'+version+'\_install.zip'))
-    .pipe(gulp.dest('./'+build))
+    .pipe(gulp.dest('./'+build));
+    done();
 });
 
 // Cleans temp folder
-gulp.task('cleanup', function() {
+gulp.task('cleanup', function(done) {
   return gulp.src('./'+temp)
-    .pipe(clean())
+    .pipe(clean());
+    done();
 });
 
 
@@ -222,21 +232,26 @@ gulp.task('cleanup', function() {
 * ------------------------------------------------------*/
 
 // gulp watch
-gulp.task('watch', function () {
+gulp.task('watch', function (done) {
   gulp.watch( src+"scss/**/*.scss", ['scss'])
   gulp.watch( src+"ecGlobal/**/*.scss", ['scss'])
   gulp.watch([ src+"js/**/*.js"], ['js'])
     gulp.watch( './containers/*', ['containers'])
-    gulp.watch( './project-details.json', ['manifest'])
+    gulp.watch( './project-details.json', ['manifest']);
+    done();
 });
 
 // gulp build
 //gulp.task('build', ['scss', 'bscss', 'js', 'images', 'containers', 'manifest']);
-gulp.task('build', gulp.series('copyfiles', 'scss', 'js', 'images', 'containers', 'manifest'));
+gulp.task('build', gulp.series('copyfiles', 'scss', 'js', 'images', 'containers', 'manifest'), function(done){
+  done();
+});
 
 //gulp.task('test', gulpSequence('copyFiles', ['scss', 'js', 'images', 'containers', 'manifest']));
 
 
 
 // gulp package
-gulp.task('package', gulp.series('build', 'buildzips', 'zipfiles', 'cleanup'));
+gulp.task('package', gulp.series('build', 'buildzips', 'zipfiles', 'cleanup'), function(done){
+  done();
+});
