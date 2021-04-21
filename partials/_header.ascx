@@ -1,3 +1,29 @@
+<style>
+
+#covid19 {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 70%);
+    width: 100%;
+    padding:.5rem;
+  }
+#covid19 h2 a {
+    color: #8f1324;
+    font-size: 1rem;
+  }
+  #covid19 h2 a:hover {
+    color: black;
+	 text-decoration: underline;
+
+  }
+  
+@media only screen and (max-width: 768px) {
+    #covid19 {
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+  }
+}
+</style>
+<div id="covid19">
+  <h2><a href="https://www.edgewood.edu/covid-19">Covid-19 Updates</a></h2>
+</div>
 <header id="siteHeader" class="header" role="banner" aria-label="Header">
 	<div class="logo">
 		<div class="hamburgerMenu">
